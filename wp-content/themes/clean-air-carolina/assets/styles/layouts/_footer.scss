@@ -1,0 +1,19 @@
+footer.main {
+
+  .footer {
+
+    &-top {
+      background: $brand-primary;
+    }
+
+    &-bottom {
+
+    }
+  }
+
+  .donate-wrap {
+    :first-child {
+      @extend .t-light;
+    }
+  }
+}

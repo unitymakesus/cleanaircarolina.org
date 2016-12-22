@@ -1,0 +1,23 @@
+.title-featured {
+  @extend .t-branded;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    background: $white;
+    display: inline-block;
+    padding: 0 18px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    border-top: 2px solid $border-main;
+    margin-bottom: -11px;
+    width: 100%;
+  }
+}

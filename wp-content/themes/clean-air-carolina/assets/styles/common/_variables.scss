@@ -1,5 +1,7 @@
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #0574b9;
+$brand-dark:            #064264;
+$white:                 #fff;
 
 // Global options
 $enable-flex:           true;
@@ -10,3 +12,11 @@ $sidebar-sm-columns:    4;
 
 // Vendor variables
 $fa-font-path:          '~font-awesome/fonts';
+
+//Typography
+$text-light:            $white;
+$text-dark:             #484645;
+$text-branded:          $brand-primary;
+
+//Layout
+$border-main:            #cfcfcf;

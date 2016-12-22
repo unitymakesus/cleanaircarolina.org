@@ -54,7 +54,7 @@ function asset_path($asset)
  */
 function display_sidebar()
 {
-    static $display;
+    static $display = false;
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }

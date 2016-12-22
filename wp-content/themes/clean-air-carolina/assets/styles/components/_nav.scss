@@ -1,0 +1,36 @@
+.nav-common {
+  li {
+    display: inline-block;
+
+    a {
+      color: $white;
+      display: inline-block;
+    }
+  }
+}
+
+.nav-primary {
+  @extend .nav-common;
+}
+
+.nav-footer {
+  @extend .nav-common;
+
+  li {
+    display: block;
+  }
+}
+
+.nav-social-wrap {
+  :first-child {
+    @extend .t-light;
+  }
+}
+
+.nav-social {
+  @extend .nav-common;
+
+  a {
+    display: inline-block;
+  }
+}

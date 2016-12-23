@@ -1,0 +1,25 @@
+/** HOME PAGE STYLES **/
+.icon-message {
+  border-left: 2px solid $border-main;
+  margin: 35px 0;
+
+  &.first {
+    border:none;
+  }
+
+  .circle-icon {
+    max-width: 150px;
+    margin: auto auto 20px;
+  }
+
+  h4 {
+    font-size: 14px;
+    padding: 0 45px 25px;
+  }
+}
+
+body.home {
+  .call-to-action-box {
+    margin-bottom: -70px;
+  }
+}

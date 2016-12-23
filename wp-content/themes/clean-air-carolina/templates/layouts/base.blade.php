@@ -9,7 +9,7 @@
     <![endif]-->
     @php(do_action('get_header'))
     @include('partials.header')
-    <div class="wrap container" role="document">
+    <div class="wrap" role="document">
       <div class="content row">
         <main class="main">
           @yield('content')

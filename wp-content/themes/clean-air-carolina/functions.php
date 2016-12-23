@@ -80,6 +80,70 @@ function cac_special_title() {
 }
 
 /**
+ * Donate Button Shortcode
+ */
+add_shortcode( 'donate_button', 'donate_button_shortcode' );
+function donate_button_shortcode() {
+    return <<<HTML
+<a href="#donate" class="btn btn-special">
+    Donate
+</a>
+HTML;
+}
+
+/**
+ * Inline SVG Shortcode
+ */
+add_shortcode( 'inline_svg', 'inline_svg_shortcode' );
+function inline_svg_shortcode($attr) {
+
+    if( empty( $attr['name'] ) )
+        return null;
+
+    $image_asset    = get_template_directory() . '/assets/images/svg/';
+    $svg_path       = $image_asset . $attr['name'] . '.svg';
+    $svg            = file_exists( $svg_path ) ? file_get_contents( $svg_path ) : null;
+
+    return $svg;
+}
+
+/**
+ * MailChimp Newsletter Form Shortcode
+ */
+add_shortcode( 'newsletter_signup', 'newsletter_signup_shortcode' );
+function newsletter_signup_shortcode() {
+
+    return <<<HTML
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup" class="mailchimp-signup">
+    <form action="//acodesmith.us13.list-manage.com/subscribe/post?u=f771a5bf552cd475fc41b7d14&amp;id=XXXXXXX" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+                <input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_f771a5bf552cd475fc41b7d14_c193ce9772" tabindex="-1" value="">
+            </div>
+        </div>
+    </form>
+</div>
+<!--End mc_embed_signup-->
+HTML;
+
+}
+
+/**
+ * Enqueue scripts and styles based on certain pages or other queries.
+ */
+function scripts_per_page() {
+
+    if ( is_page('home') ) {
+
+    }
+}
+add_action( 'wp_enqueue_scripts', 'scripts_per_page' );
+
+/**
  * Hook into the save action for pages.
  * Save the Special Title
  *
@@ -101,6 +165,8 @@ function cac_post_page( $post_id, $post ) {
             update_post_meta( $post_id, 'cac_special_title', $special_title );
     }
 }
+
+
 
 /**
  * Sage includes

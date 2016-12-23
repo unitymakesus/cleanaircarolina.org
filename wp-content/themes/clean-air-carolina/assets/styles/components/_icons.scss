@@ -1,0 +1,40 @@
+ul {
+  .icon a {
+    @extend .fa;
+    font-size: 0 !important;
+
+    &:before {
+      background: $white;
+      border-radius: 100%;
+      color: $brand-primary;
+      display: block;
+      font-size: 30px;
+      height: 40px;
+      padding: 5px;
+      text-align: center;
+      text-indent: 0;
+      text-shadow: none;
+      width: 40px;
+    }
+  }
+
+  .icon-facebook a {
+    @extend .fa-facebook;
+  }
+
+  .icon-twitter a {
+    @extend .fa-twitter;
+  }
+
+  .icon-pinterest a {
+    @extend .fa-pinterest;
+  }
+
+  .icon-instagram a {
+    @extend .fa-instagram;
+  }
+
+  .icon-youtube a {
+    @extend .fa-youtube;
+  }
+}

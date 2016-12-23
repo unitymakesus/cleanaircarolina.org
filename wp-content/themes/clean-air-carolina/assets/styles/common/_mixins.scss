@@ -1,0 +1,75 @@
+/**
+ Heading Tags
+ **/
+@mixin headings($from: 1, $to: 6){
+  @for $i from $from through $to{
+    h#{$i}{
+      @content
+    }
+  }
+}
+
+
+/**
+ * Aspect Ratio Mixin, from here:
+ * http://codepen.io/jakob-e/pen/LEdWNB
+ *
+ * @param  {integer} $ratio-or-width
+ * @param  {integer} $height:        null
+ *
+ * @return custom padding values
+ */
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+  $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
+  &:before { content:''; float: left; padding-bottom: $padding; }
+  &:after  { content:''; display: table; clear: both; }
+}
+
+
+// Sass Mixin
+// Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
+@mixin respond-to($media) {
+  /* Mobile Devices for Mice */
+  @if $media == xxs {
+    @media (max-width: 360px) { @content; }
+  }
+  /* Landscape phones and down */
+  @if $media == xs {
+    @media (max-width: 767px) { @content; }
+  }
+  /* Landscape phone to portrait tablet */
+  @if $media == sm {
+    @media (min-width: 768px) and (max-width: 991px) {@content; }
+  }
+  /* Portrait tablet to landscape and desktop */
+  @if $media == md {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  /* desktop and large desktop */
+  @if $media == lg {
+    @media (min-width: 1200px) and (max-width: 1439px) { @content; }
+  }
+
+  @if $media == xl {
+    @media (min-width: 1439px) and (max-width: 4200px) { @content; }
+  }
+}
+
+@mixin respondto($media...) {
+  @each $mediatype in $media {
+    @include respond-to($mediatype) {@content;}
+  }
+}
+
+@mixin respondtoCustom($media...) {
+  @each $mediatype in $media {
+    @media (max-width:700px) {
+      @content;
+    }
+  }
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}

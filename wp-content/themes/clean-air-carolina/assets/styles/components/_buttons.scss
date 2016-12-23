@@ -4,3 +4,44 @@
   padding: 0.5em 1em;
   text-transform: uppercase;
 }
+
+.btn-special {
+  @extend .t-shadowed;
+  background: $orange;
+  border-radius: 1px;
+  color: $white;
+  font-size: 18px;
+  padding: 10px 20px;
+  position: relative;
+  text-transform: uppercase;
+  transition: text-shadow 300ms ease;
+
+  &:after {
+    background: darken( $orange, 10% );
+    content: '';
+    bottom: -3px;
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:hover, &:active, &:focus {
+    color: $white;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,0.5);
+    transition: text-shadow 300ms ease;
+  }
+
+  &:active, &:focus {
+    box-shadow: 0 1px 0 0 #000;
+    transform: translateY(2px);
+
+    &:after {
+      height: 0;
+    }
+  }
+}

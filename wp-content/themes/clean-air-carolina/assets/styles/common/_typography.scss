@@ -1,3 +1,8 @@
+p, article, h1, h2, h3, h4, h5 {
+  font-family: 'Lato';
+}
+
+/** Colors **/
 .t-branded {
   color: $text-branded;
 }
@@ -8,4 +13,9 @@
 
 .t-dark {
   color: $text-dark;
+}
+
+/** Shadows **/
+.t-shadowed {
+  text-shadow: 1px 1px 2px $brand-dark;
 }

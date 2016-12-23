@@ -4,16 +4,68 @@ footer.main {
 
     &-top {
       background: $brand-primary;
+      padding: 25px;
     }
 
-    &-bottom {
-
+    &-middle {
+      padding:15px 25px;
     }
   }
 
-  .donate-wrap {
-    :first-child {
+  .contact-info {
+    @extend .t-light;
+    @extend .t-shadowed;
+    font-size: 14px;
+
+    address {
+      margin-bottom: 0;
+    }
+
+    a, a:hover {
       @extend .t-light;
     }
+  }
+
+  .nav-footer {
+    margin-left: 15%;
+  }
+
+  .donate-wrap {
+
+    h4 {
+      @extend .t-light;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  .footer-logos-wrap {
+    float: left;
+    width: 60%;
+
+    figure.footer-logos {
+
+      img {
+        width: 30%;
+        max-width: 150px;
+        margin-right: 10%;
+
+        &.bbb {
+          width: auto;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .search-form-wrap {
+    float: left;
+    margin-top: 15px;
+    width: 40%;
   }
 }

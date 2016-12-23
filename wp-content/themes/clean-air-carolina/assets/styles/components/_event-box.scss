@@ -1,0 +1,46 @@
+.event-box {
+  background-size: cover;
+  margin-bottom: 35px;
+
+  .container {
+    padding: 125px 0 350px;
+  }
+
+  .date {
+    @extend .t-light;
+    @extend .t-shadowed;
+    border-right: 2px solid $white;
+    float: left;
+    font-size: 55px;
+    padding:30px 45px 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      font-size: 200px;
+      margin-top: -30px;
+    }
+  }
+
+  .content {
+    float: left;
+    padding: 35px 45px;
+    width: 60%;
+
+    h3 {
+      @extend .t-light;
+      @extend .t-shadowed;
+    }
+
+    h4 {
+      @extend .t-light;
+      @extend .t-shadowed;
+      font-weight: 300;
+    }
+
+    a {
+      font-size: 1.25em;
+    }
+  }
+}

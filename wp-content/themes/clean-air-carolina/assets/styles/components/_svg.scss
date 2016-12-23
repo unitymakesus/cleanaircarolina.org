@@ -1,0 +1,9 @@
+svg {
+
+  /** Conflicts with compressed svgs with the same class names and style assignment **/
+  /** Abstracted to css file for better management **/
+  &.svg-clean-air-carolina {
+    .st0{fill:#FFFFFF;}
+    .st1{fill:#0773B8;}
+  }
+}

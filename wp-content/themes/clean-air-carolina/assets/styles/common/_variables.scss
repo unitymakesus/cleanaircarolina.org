@@ -2,6 +2,8 @@
 $brand-primary:         #0574b9;
 $brand-dark:            #064264;
 $white:                 #fff;
+$orange:                #d06528;
+$gray:                  #2a2b2a;
 
 // Global options
 $enable-flex:           true;
@@ -20,3 +22,5 @@ $text-branded:          $brand-primary;
 
 //Layout
 $border-main:            #cfcfcf;
+$border-dark:            #b3b3b3;
+$z-index-base:           100;

@@ -1,5 +1,6 @@
 .event-box {
   background-size: cover;
+  background-position: center bottom;
   margin-bottom: 35px;
 
   .container {
@@ -16,6 +17,11 @@
     text-align: center;
     text-transform: uppercase;
 
+    @include respondto(xs) {
+      border: none;
+      padding: 10px;
+    }
+
     span {
       display: block;
       font-size: 200px;
@@ -27,6 +33,15 @@
     float: left;
     padding: 35px 45px;
     width: 60%;
+
+    @include respondto(sm) {
+      width: 50%;
+    }
+
+    @include respondto(xs) {
+      width: 100%;
+      padding-top: 10px;
+    }
 
     h3 {
       @extend .t-light;

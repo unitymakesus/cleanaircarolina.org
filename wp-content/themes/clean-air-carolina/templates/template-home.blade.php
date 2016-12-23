@@ -10,12 +10,10 @@
         'type'  => 'video',
 
     ])
-    <div class="container">
-        @include('partials.content-page')
-        @php
-            $background = get_template_directory_uri() . '/assets/images/background-counter.jpg';
-        @endphp
-    </div>
+    @include('partials.content-page')
+    @php
+        $background = get_template_directory_uri() . '/assets/images/background-counter.jpg';
+    @endphp
     <div class="event-box clearfix" style="background-image:url({{$background}});">
         <div class="container">
             <h2 class="date">March <span>16</span></h2>

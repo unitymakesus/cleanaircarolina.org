@@ -20,29 +20,43 @@ header.main {
   top: 0;
   z-index: $z-index-base;
 
+  @include respondto(sm,xs) {
+    text-align: right;
+  }
+
   &.active {
     background: $brand-primary;
     transition: background 200ms ease;
   }
 
+  .logo-col {
+    @include respondto(sm,xs) {
+      width:auto;
+    }
+  }
+
   .logo-wrap {
     margin-left: 25px;
     max-width: 130px;
+
+    @include respondto(sm,xs) {
+      margin-left: 0;
+      max-width:100%;
+    }
   }
 
   .row {
     padding-top: 20px;
   }
-
-  .nav-primary {
-    float: left;
-    margin-top: 20px;
-    width: 80%;
-  }
   
   .search-action-wrap {
     float: left;
     margin-top: 10px;
+
+    @include respondto(sm,xs) {
+      display: inline-block;
+      float: none;
+    }
 
     button {
       @extend .t-light;
@@ -57,6 +71,11 @@ header.main {
   .donate-wrap {
     float: right;
     margin-top: 10px;
+
+    @include respondto(sm,xs) {
+      display: inline-block;
+      float: none;
+    }
 
     a {
       display: block;

@@ -3,6 +3,10 @@
   border-left: 2px solid $border-main;
   margin: 35px 0;
 
+  @include respondto(sm,xs) {
+    border: none;
+  }
+
   &.first {
     border:none;
   }

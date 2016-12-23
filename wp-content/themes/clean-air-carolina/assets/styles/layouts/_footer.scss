@@ -28,6 +28,10 @@ footer.main {
 
   .nav-footer {
     margin-left: 15%;
+
+    @include respondto(sm,xs) {
+      margin-left: 0;
+    }
   }
 
   .donate-wrap {
@@ -48,6 +52,12 @@ footer.main {
     float: left;
     width: 60%;
 
+    @include respondto(sm,xs) {
+      clear: both;
+      float: none;
+      width: 100%;
+    }
+
     figure.footer-logos {
 
       img {
@@ -67,5 +77,11 @@ footer.main {
     float: left;
     margin-top: 15px;
     width: 40%;
+
+    @include respondto(sm,xs) {
+      clear: both;
+      float: none;
+      width: 100%;
+    }
   }
 }

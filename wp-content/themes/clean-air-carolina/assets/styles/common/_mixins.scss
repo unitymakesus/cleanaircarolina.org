@@ -25,7 +25,6 @@
   &:after  { content:''; display: table; clear: both; }
 }
 
-
 // Sass Mixin
 // Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
 @mixin respond-to($media) {

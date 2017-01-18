@@ -12,8 +12,14 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
+	$theme_version = et_get_theme_version();
+	wp_enqueue_style('divi/style', get_template_directory_uri() . '/style.css', false, $theme_version);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+}, 100);
+
+add_action('wp_print_styles', function() {
+	wp_dequeue_style('divi-style');
 }, 100);
 
 /**

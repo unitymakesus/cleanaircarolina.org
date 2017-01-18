@@ -85,10 +85,7 @@ if (basename($stylesheet = get_option('template')) !== 'templates') {
 /**
  * Activate ET Divi Magic
  */
-$this_theme = wp_get_theme();
-$parent_theme = $this_theme['Template'];
-// trigger_error(var_dump(get_theme_root($parent_theme) . '/' . $parent_theme . '/functions.php'));
-require_once(get_theme_root($parent_theme) . '/' . $parent_theme . '/functions.php');
+require_once(get_template_directory() . '/functions.php');
 
 
 /**

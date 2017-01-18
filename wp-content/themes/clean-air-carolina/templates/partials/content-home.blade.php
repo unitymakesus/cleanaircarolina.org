@@ -10,7 +10,7 @@
 ])
 
 @include('partials.post-list', [
-    'title'     => 'Recent Post',
+    'title'     => 'Recent Posts',
     'partial'   => 'partials.content-post-callout',
     'args'  => [
         'posts_per_page' => 6

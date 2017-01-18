@@ -5,15 +5,9 @@
         </figure>
         <footer>
             @php
-                /** Special Title post meta overrides the title **/
-                $postmeta   = get_post_meta( get_the_ID() );
-                $title      = get_the_title();
-
-                if( ! empty( $postmeta[ 'cac_special_title' ] )
-                    && ! empty( $postmeta[ 'cac_special_title' ][0] ) ) {
-                    $title = $postmeta[ 'cac_special_title' ][0];
-                }
-
+              /** Special Title post meta overrides the title **/
+              $postmeta   = get_post_meta( get_the_ID() );
+              $title      = get_the_title();
             @endphp
             <h3 class="title">{{ $title }}</h3>
             <div class="excerpt">

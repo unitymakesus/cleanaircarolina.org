@@ -13,7 +13,7 @@
     "src/**/*.php"
   ],
   "publicPath": "/wp-content/themes/clean-air-carolina",
-  "devUrl": "http://local.cleanaircarolina.org/",
+  "devUrl": "http://cleanaircarolina.dev/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]"
 }

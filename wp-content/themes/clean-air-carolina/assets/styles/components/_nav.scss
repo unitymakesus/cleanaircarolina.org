@@ -1,11 +1,14 @@
 .nav-common {
-  li {
-    display: inline;
+  .nav > li {
+    list-style: none;
+    display: block;
+    float: left;
+    position: relative;
 
-    a {
+    & > a {
       @extend .t-shadowed;
       color: $white;
-      display: inline-block;
+      display: block;
     }
   }
 }
@@ -13,23 +16,56 @@
 $number_of_links: 5;
 .nav-primary {
   @extend .nav-common;
-  text-align: center;
 
   li {
-
     a {
       background: transparent;
-      padding: 0 3.25%;
+      padding: 0 20px;
       text-transform: uppercase;
       transition: background 400ms ease;
 
-      @include respondto(md) {
-        padding: 0 1.8%;
-      }
+      // @include respondto(md) {
+      //   padding: 0 1.8%;
+      // }
 
       &:hover {
-        background: $brand-primary;
-        transition: background 400ms ease;
+        color: $white;
+        // transition: background 400ms ease;
+      }
+    }
+
+    .sub-menu {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      background: $white;
+      list-style: none;
+      width: 230px;
+      border-radius: 2px;
+      box-shadow: 0 0 2px $trans-blue-70;
+      transition: all .3s ease;
+
+      a {
+        color: $brand-primary;
+        display: block;
+        padding: 8px 20px;
+        transition: all .3s ease;
+        text-transform: none;
+
+        &:hover {
+          background: $brand-primary;
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+      .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, 5px, 0);
       }
     }
   }

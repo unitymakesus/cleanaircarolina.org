@@ -2,7 +2,9 @@
 
 namespace App;
 
+use Illuminate\Contracts\Container\Container as ContainerContract;
 use Roots\Sage\Assets\JsonManifest;
+use Roots\Sage\Config;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
@@ -11,7 +13,6 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_style('sage/main.css', 'https://fonts.googleapis.com/css?family=Lato', false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
@@ -40,10 +41,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation'    => __('Primary Navigation', 'sage'),
-        'footer_navigation'     => __('Footer Navigation', 'sage'),
-        'social_navigation'     => __('Social Navigation', 'sage'),
-        'micro_navigation'     => __('Micro Navigation', 'sage'),
+        'primary_navigation' => __('Primary Navigation', 'sage')
     ]);
 
     /**
@@ -57,6 +55,12 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
     add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+
+    /**
+     * Enable selective refresh for widgets in customizer
+     * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
+     */
+    add_theme_support('customize-selective-refresh-widgets');
 
     /**
      * Use main stylesheet for visual editor
@@ -86,36 +90,51 @@ add_action('widgets_init', function () {
 });
 
 /**
+ * Updates the `$post` variable on each iteration of the loop.
+ * Note: updated value is only available for subsequently loaded views, such as partials
+ */
+add_action('the_post', function ($post) {
+    sage('blade')->share('post', $post);
+});
+
+/**
  * Setup Sage options
  */
 add_action('after_setup_theme', function () {
     /**
      * Sage config
      */
-    sage()->bindIf('config', function () {
-        return [
-            'view.paths'      => [TEMPLATEPATH, STYLESHEETPATH],
-            'view.compiled'   => wp_upload_dir()['basedir'].'/cache/compiled',
-            'view.namespaces' => ['App' => WP_CONTENT_DIR],
-            'assets.manifest' => get_stylesheet_directory().'/dist/assets.json',
-            'assets.uri'      => get_stylesheet_directory_uri().'/dist'
-        ];
-    });
+    $paths = [
+        'dir.stylesheet' => get_stylesheet_directory(),
+        'dir.template'   => get_template_directory(),
+        'dir.upload'     => wp_upload_dir()['basedir'],
+        'uri.stylesheet' => get_stylesheet_directory_uri(),
+        'uri.template'   => get_template_directory_uri(),
+    ];
+    $viewPaths = collect(preg_replace('%[\/]?(templates)?[\/.]*?$%', '', [STYLESHEETPATH, TEMPLATEPATH]))
+        ->flatMap(function ($path) {
+            return ["{$path}/templates", $path];
+        })->unique()->toArray();
+    config([
+        'assets.manifest' => "{$paths['dir.stylesheet']}/dist/assets.json",
+        'assets.uri'      => "{$paths['uri.stylesheet']}/dist",
+        'view.compiled'   => "{$paths['dir.upload']}/cache/compiled",
+        'view.namespaces' => ['App' => WP_CONTENT_DIR],
+        'view.paths'      => $viewPaths,
+    ] + $paths);
 
     /**
      * Add JsonManifest to Sage container
      */
-    sage()->singleton('sage.assets', function ($app) {
-        $config = $app['config'];
-        return new JsonManifest($config['assets.manifest'], $config['assets.uri']);
+    sage()->singleton('sage.assets', function () {
+        return new JsonManifest(config('assets.manifest'), config('assets.uri'));
     });
 
     /**
      * Add Blade to Sage container
      */
-    sage()->singleton('sage.blade', function ($app) {
-        $config = $app['config'];
-        $cachePath = $config['view.compiled'];
+    sage()->singleton('sage.blade', function (ContainerContract $app) {
+        $cachePath = config('view.compiled');
         if (!file_exists($cachePath)) {
             wp_mkdir_p($cachePath);
         }
@@ -129,4 +148,16 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return '<?= App\\asset_path(\''.trim($asset, '\'"').'\'); ?>';
     });
+
+    /**
+     * Create @get_sset() Blade directive
+     */
+    sage('blade')->compiler()->directive('get_asset', function ($asset) {
+        return '<? $asset = App\\asset_path(\''.trim($asset, '\'"').'\'); ?>';
+    });
 });
+
+/**
+ * Init config
+ */
+sage()->bindIf('config', Config::class, true);

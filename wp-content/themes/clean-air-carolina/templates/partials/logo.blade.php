@@ -1,10 +1,10 @@
-<div class="logo-wrap">
 @php
-    $theme_url      = get_template_directory();
-    $image_asset    = $theme_url . '/assets/images/svg/';
-    $logo_path      = $image_asset . 'clean-air-carolina.svg';
-    $svg            = file_get_contents( $logo_path );
-
-    echo $svg;
+  use App as A;
+  $logo = @file_get_contents(A\sage('assets')->getUri('images/svg/clean-air-carolina.svg'));
 @endphp
+
+<div class="logo-wrap">
+  @if ($logo !== FALSE)
+    {!! $logo !!}
+  @endif
 </div>

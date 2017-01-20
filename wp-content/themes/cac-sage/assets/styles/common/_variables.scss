@@ -1,0 +1,29 @@
+// Colors
+$brand-primary:         #0574b9;
+$brand-dark:            #064264;
+$white:                 #fff;
+$orange:                #d06528;
+$gray:                  #2a2b2a;
+$trans-blue-70:         hsla(203, 93, 37, .7);
+$trans-blue-0:          hsla(203, 93, 37, 0);
+
+
+// Global options
+$enable-flex:           true;
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Vendor variables
+$fa-font-path:          '~font-awesome/fonts';
+
+//Typography
+$text-light:            $white;
+$text-dark:             #484645;
+$text-branded:          $brand-primary;
+
+//Layout
+$border-main:            #cfcfcf;
+$border-dark:            #b3b3b3;
+$z-index-base:           100;

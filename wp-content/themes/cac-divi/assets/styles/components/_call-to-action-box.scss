@@ -1,0 +1,36 @@
+.et_pb_section.act-now {
+  position: relative;
+  z-index: 10;
+  height: 100px;
+
+  & > div {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.call-to-action-box {
+  background: $gray;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 $gray;
+  padding: 20px;
+  text-align: center;
+
+  .title {
+    @extend .t-light;
+    @extend .t-shadowed;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    @extend .t-light;
+    @extend .t-shadowed;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}

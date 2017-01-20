@@ -1,0 +1,79 @@
+header.main .nav li {
+  @extend .nav-item;
+}
+header.main .nav a {
+  @extend .nav-link;
+}
+
+$header-height: 90px;
+header.main {
+  background: transparent;
+  height: $header-height;
+  position: fixed;
+  transition: background 200ms ease;
+  top: 0;
+  z-index: $z-index-base;
+
+  @include respondto(sm,xs) {
+    text-align: right;
+  }
+
+  &.active {
+    background: $brand-primary;
+    transition: background 200ms ease;
+  }
+
+  .logo-col {
+    @include respondto(sm,xs) {
+      width:auto;
+    }
+  }
+
+  .logo-wrap {
+    margin-left: 25px;
+    max-width: 130px;
+
+    @include respondto(sm,xs) {
+      margin-left: 0;
+      max-width:100%;
+    }
+  }
+
+  .row {
+    padding-top: 20px;
+  }
+
+  .search-action-wrap {
+    float: left;
+    margin-top: 10px;
+
+    @include respondto(sm,xs) {
+      display: inline-block;
+      float: none;
+    }
+
+    button {
+      @extend .t-light;
+      @extend .t-shadowed;
+      background: transparent;
+      border: none;
+      font-size: 1.5em;
+      padding: 0 10px;
+    }
+  }
+
+  .donate-wrap {
+    float: right;
+    margin-top: 10px;
+
+    @include respondto(sm,xs) {
+      display: inline-block;
+      float: none;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+}

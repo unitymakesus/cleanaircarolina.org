@@ -1,0 +1,31 @@
+body, p, article, h1, h2, h3, h4, h5 {
+  font-family: 'Lato';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: $text-branded;
+}
+
+.et_pb_text {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+/** Colors **/
+.t-branded {
+  color: $text-branded;
+}
+
+.t-light {
+  color: $text-light;
+}
+
+.t-dark {
+  color: $text-dark;
+}
+
+/** Shadows **/
+.t-shadowed {
+  text-shadow: 1px 1px 2px $brand-dark;
+}

@@ -1,0 +1,37 @@
+$submit-width: 115px;
+form.search-form {
+  border: 2px solid $border-dark;
+  border-radius: 2px;
+  position: relative;
+
+  label {
+    padding-right: $submit-width;
+    width: 100%;
+  }
+
+  input[type=search] {
+    padding: 5px;
+    height: auto;
+    border: none;
+    width: 100%;
+  }
+
+  input[type=submit] {
+    background: $brand-primary;
+    border:none;
+    border-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: $white;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $submit-width;
+
+    &:hover, &:active, &:focus {
+      background: $brand-dark;
+      color: $white;
+    }
+  }
+}

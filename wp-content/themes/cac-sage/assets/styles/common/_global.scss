@@ -1,0 +1,10 @@
+.main {
+  padding: 0 !important;
+}
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    width: 100%;
+  }
+}

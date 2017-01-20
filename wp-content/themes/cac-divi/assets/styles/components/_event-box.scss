@@ -1,0 +1,91 @@
+.event-box {
+  // background-size: cover;
+  // background-position: center bottom;
+  // margin-bottom: 35px;
+  font-size: 20px;
+
+  .container {
+    padding: 125px 0 350px;
+  }
+
+  .month.month {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 0;
+
+    p {
+      margin: 0;
+      line-height: inherit;
+    }
+  }
+
+  .date {
+    font-size: 9em;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+
+    p {
+      margin: 0;
+      line-height: inherit;
+    }
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  // .date {
+  //   @extend .t-light;
+  //   @extend .t-shadowed;
+  //   border-right: 2px solid $white;
+  //   float: left;
+  //   font-size: 55px;
+  //   padding:30px 45px 0;
+  //   text-align: center;
+  //   text-transform: uppercase;
+  //
+  //   @include respondto(xs) {
+  //     border: none;
+  //     padding: 10px;
+  //   }
+  //
+  //   span {
+  //     display: block;
+  //     font-size: 200px;
+  //     margin-top: -30px;
+  //   }
+  // }
+  //
+  // .content {
+  //   float: left;
+  //   padding: 35px 45px;
+  //   width: 60%;
+  //
+  //   @include respondto(sm) {
+  //     width: 50%;
+  //   }
+  //
+  //   @include respondto(xs) {
+  //     width: 100%;
+  //     padding-top: 10px;
+  //   }
+  //
+  //   h3 {
+  //     @extend .t-light;
+  //     @extend .t-shadowed;
+  //   }
+  //
+  //   h4 {
+  //     @extend .t-light;
+  //     @extend .t-shadowed;
+  //     font-weight: 300;
+  //   }
+  //
+  //   a {
+  //     font-size: 1.25em;
+  //   }
+  // }
+}

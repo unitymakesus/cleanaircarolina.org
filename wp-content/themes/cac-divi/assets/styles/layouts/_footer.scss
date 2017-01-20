@@ -1,0 +1,93 @@
+footer.main {
+
+  .footer {
+
+    &-top {
+      background: $brand-primary;
+      padding: 25px;
+    }
+
+    &-middle {
+      padding:15px 25px;
+      overflow: hidden;
+    }
+
+    &-bottom {
+      background: $gray;
+      color: $white;
+      font-size: 12px;
+      padding: 5px 0;
+      overflow: hidden;
+      line-height: 30px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .contact-info {
+    @extend .t-light;
+    @extend .t-shadowed;
+    font-size: 14px;
+
+    address {
+      margin-bottom: 0;
+    }
+
+    a, a:hover {
+      @extend .t-light;
+    }
+  }
+
+  .donate-wrap {
+
+    h4 {
+      @extend .t-light;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  .footer-logos-wrap {
+    float: left;
+    width: 60%;
+
+    @include respondto(sm,xs) {
+      clear: both;
+      float: none;
+      width: 100%;
+    }
+
+    figure.footer-logos {
+
+      img {
+        width: 25%;
+        max-width: 150px;
+        margin-right: 4%;
+
+        &.bbb {
+          width: auto;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .search-form-wrap {
+    float: left;
+    margin-top: 15px;
+    width: 40%;
+
+    @include respondto(sm,xs) {
+      clear: both;
+      float: none;
+      width: 100%;
+    }
+  }
+}

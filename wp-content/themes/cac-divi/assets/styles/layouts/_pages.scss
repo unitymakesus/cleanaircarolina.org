@@ -1,0 +1,43 @@
+.main {
+  .et_pb_section_0.et_pb_fullwidth_section {
+    .et_pb_fullwidth_header {
+      padding-top: 120px;
+    }
+  }
+}
+
+.et_pb_testimonial {
+  &:before {
+    background: $brand-primary;
+    color: $white;
+  }
+
+  .et_pb_testimonial_description_inner {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+/** HOME PAGE STYLES **/
+.icon-message {
+  border-left: 2px solid $border-main;
+  margin: 35px 0;
+
+  @include respondto(sm,xs) {
+    border: none;
+  }
+
+  &.first {
+    border:none;
+  }
+
+  .circle-icon {
+    max-width: 150px;
+    margin: auto auto 20px;
+  }
+
+  h4 {
+    font-size: 14px;
+    padding: 0 45px 25px;
+  }
+}

@@ -1,17 +1,20 @@
-.et_pb_blurb.et_pb_blurb.et_pb_bg_layout_dark {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+.et_pb_blurb.et_pb_blurb.et_pb_bg_layout_dark:not(.et_pb_text_align_left) {
+  border: 0;
   @include aspect-ratio(4, 3);
-  overflow: hidden;
+  transition: all .3s ease;
 
   .et_pb_blurb_content {
     position: absolute;
     height: 100%;
+    overflow: hidden;
   }
 
   .et_pb_main_blurb_image {
     margin: 0;
+
+    a {
+      display: block;
+    }
   }
 
   .et_pb_blurb_container {
@@ -38,5 +41,9 @@
         }
       }
     }
+  }
+
+  &:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
   }
 }

@@ -2,6 +2,7 @@
 
 // Import npm dependencies
 @import "~bootstrap/scss/bootstrap";
+$fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
 @import "common/mixins";
@@ -18,6 +19,7 @@
 @import "components/grid";
 @import "components/hero";
 @import "components/icons";
+@import "components/iframe";
 @import "components/nav";
 @import "components/newsletter-signup";
 @import "components/search";

@@ -1,0 +1,58 @@
+.et_pb_social_media_follow.et_pb_bg_layout_dark {
+  background: $brand-primary;
+  margin-bottom: 0 !important;
+  padding: 10px 15px;
+
+  &::before {
+    content: "Follow Us";
+    color: $white;
+    float: left;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 32px;
+    vertical-align: middle;
+    font-weight: bold;
+  }
+
+  li {
+    margin: 0;
+    float: right;
+
+    a {
+      background-color: $white !important;
+
+      &::before {
+        display: inline;
+      }
+    }
+
+    &.et-social-twitter {
+      a::before {
+        color: #00aced;
+      }
+    }
+
+    &.et-social-facebook {
+      a::before {
+        color: #3b5998;
+      }
+    }
+  }
+
+  a.follow_button {
+    display: none;
+  }
+}
+
+.fts-mashup {
+  background: #DCDCDC !important;
+  padding: 10px 15px !important;
+
+  .fts-mashup-post-wrap {
+    background: $white;
+    padding: 20px !important;
+    border-radius: 5px;
+    font-size: 16px;
+    color: $text-dark;
+  }
+}

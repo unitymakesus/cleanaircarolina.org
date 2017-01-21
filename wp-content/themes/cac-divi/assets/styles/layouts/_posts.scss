@@ -1,0 +1,27 @@
+.et_pb_blog_grid {
+  h2 {
+    text-align: left;
+    color: $brand-primary !important;
+    padding: 0;
+  }
+
+  .post-content {
+    p {
+      padding: 0 !important;
+    }
+
+    .more-link {
+      background: $brand-primary;
+      color: $white;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      font-weight: bold;
+      transition: all .3s ease;
+
+      &:hover {
+        text-decoration: none;
+        background: $brand-dark;
+      }
+    }
+  }
+}

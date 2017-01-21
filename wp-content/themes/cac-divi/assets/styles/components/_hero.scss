@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 120px;
 
-  &::before {
+  .et_pb_section_video_bg::before {
     content: '';
     position: absolute;
     top: 0;
@@ -61,6 +61,7 @@
 
     p {
       @extend .t-light;
+      @extend .t-shadowed;
       font-size: 20px;
       max-width: 650px;
       margin: auto;

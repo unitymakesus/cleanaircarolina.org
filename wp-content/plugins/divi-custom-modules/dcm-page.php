@@ -100,7 +100,7 @@ function facebook_render(  ) {
 
     $options = get_option( 'dcm_settings' );
     ?>
-	<input type='checkbox' name='dcm_settings[facebook]' value='1' <?php if ( 1 == $options['facebook'] ) echo 'checked="checked"'; ?> />
+	<input type='checkbox' name='dcm_settings[facebook]' value='1' <?php if (isset($options['facebook']) && $options['facebook'] == 1) echo 'checked="checked"'; ?> />
     <?php
 
 }
@@ -111,7 +111,7 @@ function googleplus_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[google]' value='1' <?php if ( 1 == $options['google'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[google]' value='1' <?php if (isset($options['google']) && $options['google'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function twitter_render(  )
@@ -119,7 +119,7 @@ function twitter_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[twitter]' value='1' <?php if ( 1 == $options['twitter'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[twitter]' value='1' <?php if (isset($options['twitter']) && $options['twitter'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function linkedin_render(  )
@@ -127,7 +127,7 @@ function linkedin_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[linkedin]' value='1' <?php if ( 1 == $options['linkedin'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[linkedin]' value='1' <?php if (isset($options['linkedin']) && $options['linkedin'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function email_render(  )
@@ -135,7 +135,7 @@ function email_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[email]' value='1' <?php if ( 1 == $options['email'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[email]' value='1' <?php if (isset($options['email']) && $options['email'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function whatsapp_render(  )
@@ -143,7 +143,7 @@ function whatsapp_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[whatsapp]' value='1' <?php if ( 1 == $options['whatsapp'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[whatsapp]' value='1' <?php if (isset($options['whatsapp']) && $options['whatsapp'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 
@@ -152,7 +152,7 @@ function author_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[author]' value='1' <?php if ( 1 == $options['author'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[author]' value='1' <?php if (isset($options['whatsapp']) && $options['author'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function date_render(  )
@@ -160,7 +160,7 @@ function date_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[date]' value='1' <?php if ( 1 == $options['date'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[date]' value='1' <?php if (isset($options['date']) && $options['date'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function comments_render(  )
@@ -168,7 +168,7 @@ function comments_render(  )
     $options = get_option('dcm_settings');
     ?>
 
-    <input type='checkbox' name='dcm_settings[comments]' value='1' <?php if ( 1 == $options['comments'] ) echo 'checked="checked"'; ?> />
+    <input type='checkbox' name='dcm_settings[comments]' value='1' <?php if (isset($options['comments']) && $options['comments'] == 1) echo 'checked="checked"'; ?> />
     <?php
 }
 function dcm_settings_section_callback(  ) {
@@ -183,36 +183,38 @@ function dcm_settings_section__meta_callback (){
 
 function Social_Share(){
     $options = get_option('dcm_settings');
-    if ( 1 == $options['facebook'] ): ?>
+		echo '<div id="social-links" class="blog-social">';
+    if (isset($options['facebook']) && $options['facebook'] == 1): ?>
         <a class="facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" target="blank"><i class="fa fa-facebook"></i></a>
     <?php endif; ?>
-    <?php  if ( 1 == $options['google'] ): ?>
+    <?php  if (isset($options['google']) && $options['google'] == 1): ?>
         <a class="google" href="https://plusone.google.com/_/+1/confirm?hl=en-US&amp;url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-google"></i></a>
     <?php endif; ?>
-    <?php  if ( 1 == $options['twitter'] ): ?>
+    <?php  if (isset($options['twitter']) && $options['twitter'] == 1): ?>
         <a class="twitter" href="https://twitter.com/intent/tweet?original_referer=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;tw_p=tweetbutton&amp;url=<?php the_permalink(); ?><?php echo isset( $twitter_user ) ? '&amp;via='.$twitter_user : ''; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
     <?php endif; ?>
-    <?php  if ( 1 == $options['linkedin'] ): ?>
+    <?php  if (isset($options['linkedin']) && $options['linkedin'] == 1): ?>
         <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php bloginfo( 'name' ); ?>"><i class="fa fa-linkedin"></i></a>
     <?php endif; ?>
-    <?php  if ( 1 == $options['email'] ): ?>
+    <?php  if (isset($options['email']) && $options['email'] == 1): ?>
         <a class="email" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a>
 			<?php endif; ?>
-		<?php  if ( 1 == $options['whatsapp'] ): ?>
+		<?php  if (isset($options['whatsapp']) && $options['whatsapp'] == 1): ?>
 		<a class="whatsapp" href="whatsapp://send?text=<?php the_permalink( ); ?>"><i class="fa fa-whatsapp"></i></a>
 	<?php endif;
+	echo '</div>';
 }
 
 function Custom_Meta () {
     $options = get_option('dcm_settings');
 	echo '<div class="blog-p-meta">';
-    if (1 == $options['author']): ?>
+    if (isset($options['author']) && $options['author'] == 1): ?>
         <span class="blog-author"> <i class="fa fa-pencil"></i><?php _e('by ','DIVI_TEXT_DOMAIN'); ?><?php the_author_posts_link(); ?> </span>
         <?php endif; ?>
-    <?php if (1 == $options['date']): ?>
+    <?php if (isset($options['date']) && $options['date'] == 1): ?>
         <span class="blog-date"> <i class="fa fa-clock-o"></i><?php the_time('M d, Y') ?></span>
     <?php endif; ?>
-    <?php if (1 == $options['comments']): ?>
+    <?php if (isset($options['comments']) && $options['comments'] == 1): ?>
         <span class="blog-comments"> <i class="fa fa-comment"></i><?php comments_number(  ); ?></span>
     <?php endif;
 	echo '</div>';

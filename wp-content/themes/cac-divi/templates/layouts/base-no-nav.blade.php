@@ -9,7 +9,7 @@
     <![endif]-->
     @php(do_action('get_header'))
     <div class="wrap nonav" role="document">
-      <div class="content row">
+      <div class="content">
         <main class="main">
           @yield('content')
         </main>

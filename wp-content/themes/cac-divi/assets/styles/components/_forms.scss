@@ -13,3 +13,24 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+// Raiser's Edge forms
+.et_pb_section .BBFormContainer[data-bbox-part-id="592cc3be-3192-4017-9b9d-4d249b701fb2"],
+.et_pb_section .BBFormContainer[data-bbox-part-id="4a2c37da-4692-489d-9dbf-83ce7bd0f75d"] {
+  font-family: 'Lato';
+
+  .BBFormSection {
+    margin: 8px auto;
+  }
+
+  .BBFormSubmitbutton {
+    @extend .btn-special;
+    font-size: 24px;
+    border-bottom: 3px solid darken($orange, 10%);
+
+    &:hover {
+      background-color: $green;
+      border-bottom-color: darken($green, 10%);
+    }
+  }
+}

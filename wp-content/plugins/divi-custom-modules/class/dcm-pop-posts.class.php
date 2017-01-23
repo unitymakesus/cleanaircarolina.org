@@ -20,22 +20,7 @@ class DCM_Pop_Posts extends WP_Widget{
 
 	public function form( $instance ) {
 		extract( $instance );
-		$background = esc_attr( $instance['background'] );
-		$color      = esc_attr( $instance['color'] );
 		?>
-		<script type="text/javascript">
-			//<![CDATA[
-			jQuery(document).ready(function () {
-				// colorpicker field
-				jQuery('.cw-color-picker').each(function () {
-					var $this = jQuery(this),
-						id = $this.attr('rel');
-
-					$this.farbtastic('#' + id);
-				});
-			});
-			//]]>
-		</script>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ) ?>">Title:</label>
 			<input
@@ -89,8 +74,6 @@ class DCM_Pop_Posts extends WP_Widget{
 		if ( ! isset( $popcateg ) ) {
 			$popcateg = '';
 		}
-		$background = $instance['background'];
-		$color      = esc_attr( $instance['color'] );
 		?>
 		<?php echo $before_widget; ?>
 		<?php
@@ -129,15 +112,5 @@ class DCM_Pop_Posts extends WP_Widget{
 add_action( 'widgets_init', 'register_divichild_PopularPosts' );
 function register_divichild_PopularPosts() {
 	register_widget( 'DCM_Pop_Posts' );
-	function sample_load_color_picker_script() {
-		wp_enqueue_script( 'farbtastic' );
-	}
-
-	function sample_load_color_picker_style() {
-		wp_enqueue_style( 'farbtastic' );
-	}
-
-	add_action( 'admin_print_scripts-widgets.php', 'sample_load_color_picker_script' );
-	add_action( 'admin_print_styles-widgets.php', 'sample_load_color_picker_style' );
 
 }

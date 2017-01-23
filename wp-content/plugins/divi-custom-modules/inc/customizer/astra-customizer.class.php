@@ -13,7 +13,7 @@ class Astra_Customizer
    public function register_customize_sections($wp_customize)
   {
     $wp_customize->add_section( 'colors_astra', array(
-		'title'    => __( 'Astra Blog Layout', 'dcm' ),
+		'title'    => __( 'Divi Custom Blog Layout', 'dcm' ),
 		'priority' => 101
 	) );
   $this->colours_section( $wp_customize );
@@ -57,7 +57,11 @@ class Astra_Customizer
   'sanitize_callback' => 'sanitize_hex_color'
   ) );
   $wp_customize->add_setting( 'wid_title_bg', array(
-  'default'           => '#16a085',
+  'default'           => '#fff',
+  'sanitize_callback' => 'sanitize_hex_color'
+  ) );
+  $wp_customize->add_setting( 'all_wid_title_color', array(
+  'default'           => '#000',
   'sanitize_callback' => 'sanitize_hex_color'
   ) );
   $wp_customize->add_setting( 'wid_title_color', array(
@@ -124,13 +128,19 @@ class Astra_Customizer
     'priority' => 10
   ) ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wid_title_bg', array(
-    'label'    => esc_html__( 'Latest Posts Widget Background', 'dcm' ),
+    'label'    => esc_html__(  '(All)Widgets Title Background', 'dcm' ),
     'section'  => 'colors_astra',
     'settings' => 'wid_title_bg',
     'priority' => 10
   ) ) );
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'all_wid_title_color', array(
+    'label'    => esc_html__(  '(All)Widgets Title Color', 'dcm' ),
+    'section'  => 'colors_astra',
+    'settings' => 'all_wid_title_color',
+    'priority' => 10
+  ) ) );
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wid_title_color', array(
-    'label'    => esc_html__( 'Posts Widget Link color', 'dcm' ),
+    'label'    => esc_html__( '(Latest - Popular)Posts Widget Link color', 'dcm' ),
     'section'  => 'colors_astra',
     'settings' => 'wid_title_color',
     'priority' => 10

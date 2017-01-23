@@ -19,22 +19,7 @@ class DCM_Latest_Posts extends WP_Widget{
 
 	public function form( $instance ) {
 		extract( $instance );
-		$background = esc_attr( $instance['background'] );
-		$color      = esc_attr( $instance['color'] );
 		?>
-		<script type="text/javascript">
-			//<![CDATA[
-			jQuery(document).ready(function () {
-				// colorpicker field
-				jQuery('.cw-color-picker').each(function () {
-					var $this = jQuery(this),
-						id = $this.attr('rel');
-
-					$this.farbtastic('#' + id);
-				});
-			});
-			//]]>
-		</script>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ) ?>">Title:</label>
 			<input
@@ -87,8 +72,6 @@ class DCM_Latest_Posts extends WP_Widget{
 		if ( ! isset( $categ ) ) {
 			$categ = '';
 		}
-		$background = $instance['background'];
-		$color      = esc_attr( $instance['color'] );
 		?>
 		<?php echo $before_widget; ?>
 		<?php

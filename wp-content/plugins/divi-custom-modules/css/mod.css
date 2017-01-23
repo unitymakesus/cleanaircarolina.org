@@ -26,11 +26,6 @@
     line-height: 1em;
     font-weight: bold;
 }
-@media only screen and (max-width: 780px) {
-.et_pb_blog_dcm_0 .dcm_post .entry-title, .et_pb_blog_dcm_0  .dcm_post p {
-    padding: 10px;
-}
-}
 @media only screen and (max-width: 980px) {
     .et_pb_post_custom h2, .dcm_post h2 {
         line-height: 1em!important;
@@ -55,11 +50,11 @@ article.et_pb_post_custom, article.et_pb_blog_grid, article.dcm_post {
 .single {text-align: center;}
 .et_pb_blog_grid p{padding: 10px!important;}
 .et_pb_blog_grid .blog-social {text-align: center;}
-.et_pb_blog_grid h2 {
+.et_pb_blog_grid.custom_title h2 {
     margin-top: 0px !important;
+    color: #fff;
     text-align: center;
     /**background: #16a085;**/
-    color: #fff;
     padding: 10px;
 }
 @media only screen and (max-width: 980px){
@@ -205,13 +200,13 @@ a.pop-posts-title {
     font-weight: bold;
     margin: 0 auto;
     padding-bottom: 5px;
-    font-size: 12px;
+
     text-align: center;
 }
 a.pop-posts-img > img {
     box-shadow: 2px 2px 2px rgba(44, 62, 80,0.4);
 }
-.latest-posts-title {
+a.latest-posts-title {
     color: #fff;
     font-weight: bold;
     background: rgba(44, 62, 80,0.9);
@@ -234,7 +229,8 @@ a.latest-posts-img > img {
 .et_left_sidebar #sidebar {padding-right: 0px;}
 
 
-/*-----CUSTOM DIVI CHILD ABOUT-------*/.astra-about {
+/*-----CUSTOM DIVI CHILD ABOUT-------*/
+.astra-about {
   padding: 10px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -252,9 +248,7 @@ a.latest-posts-img > img {
 .et_pb_widget_area_left {padding-right: 0px; border-right: none;}
 /*WIDGETS*/
 h4.widgettitle {
-  font-size: 14px;
   text-transform: uppercase;
-  color: #fff;
-  padding: 15px 20px;
+  padding: 15px 0px;
   border-radius: 4px 4px 0px 0px;
 }

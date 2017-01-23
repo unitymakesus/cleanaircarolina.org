@@ -23,7 +23,7 @@ $number_of_links: 5;
 
       a {
         background: transparent;
-        padding: 8px 20px;
+        padding: 8px 15px;
         line-height: 1;
         text-transform: uppercase;
         transition: background 400ms ease;
@@ -47,6 +47,7 @@ $number_of_links: 5;
       .sub-menu {
         padding: 0;
         border-bottom: 3px solid $brand-dark;
+        border-top: none;
         transition: all .3s ease;
 
         li {
@@ -176,6 +177,7 @@ $number_of_links: 5;
 
 .nav-footer {
   @extend .nav-common;
+  padding-left: 20px;
 
   li {
     display: block;
@@ -212,7 +214,7 @@ $number_of_links: 5;
     transition: all 200ms ease;
 
     &:hover {
-      box-shadow: 0 0 0 3px $brand-dark;
+      box-shadow: 0 0 10px 1px $brand-dark;
       text-decoration: none;
       transition: all 300ms ease;
 

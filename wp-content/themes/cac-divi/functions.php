@@ -89,30 +89,12 @@ require_once(get_template_directory() . '/functions.php');
 
 
 /**
- * Let's make the pages better
- */
-add_action( 'init', 'cac_extend_page_functionality' );
-function cac_extend_page_functionality() {
-
-    //Add Excerpt
-    add_post_type_support( 'page', 'excerpt' );
-
-    //Add Categories and Tags
-    register_taxonomy_for_object_type( 'post_tag', 'page' );
-    register_taxonomy_for_object_type( 'category', 'page' );
-
-    //Hook
-    add_action( 'save_post', 'cac_post_page', 10, 2 );
-}
-
-
-/**
  * Donate Button Shortcode
  */
 add_shortcode( 'donate_button', 'donate_button_shortcode' );
 function donate_button_shortcode() {
     return <<<HTML
-<a href="#donate" class="btn btn-special">
+<a href="/donate" class="btn btn-special">
     Donate
 </a>
 HTML;

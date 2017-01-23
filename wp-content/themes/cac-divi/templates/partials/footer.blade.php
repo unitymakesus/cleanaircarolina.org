@@ -52,7 +52,15 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="pull-left">
-        <a href="http://unitymakes.us/" target="_blank"><img src="#" alt="Unity Makes Us" /></a>
+        @php
+          use App as A;
+          $unity = @file_get_contents(A\sage('assets')->getUri('images/svg/made-with-unity.svg'));
+        @endphp
+        <a href="http://unitymakes.us/" class="unity-link" target="_blank">
+          @if ($unity !== FALSE)
+            {!! $unity !!}
+          @endif
+        </a>
         &nbsp;&nbsp;
         All contents &copy; {{ the_date('Y') }} Clean Air Carolina. All rights reserved.
       </div>

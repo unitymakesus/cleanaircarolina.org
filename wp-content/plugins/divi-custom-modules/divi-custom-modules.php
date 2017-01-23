@@ -3,13 +3,14 @@
 Plugin Name: Divi Custom Modules
 Plugin URI: https://divithemestore.com/theme-store/plugins/divi-custom-modules/
 Description: A Brand new Divi Custom Modules for Divi Theme
-Author: Guilherme Fonseca
+Author: Divi Theme Store
 Author URI: https://divithemestore.com/
-Version: 1.7.3
+Version: 1.7.4
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  dcm
  */
+ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // DIVI THEME STORE LOAD CLASSES AND PLUGIN OPTIONS PAGE
 add_action( 'init', 'dcm_load_textdomain' );
 /**
@@ -25,8 +26,8 @@ include (DCM__PLUGIN_DIR . 'dcm-page.php');
 require_once( DCM__PLUGIN_DIR . 'class/dcm-pop-posts.class.php' );
 require_once( DCM__PLUGIN_DIR . 'class/dcm-latest-posts.class.php' );
 require_once( DCM__PLUGIN_DIR . 'class/dcm-custom-about.class.php' );
-require( DCM__PLUGIN_DIR . '/inc/customizer/customizer-control.php' );
-require( DCM__PLUGIN_DIR . '/class.wp-auto-plugin-update.php');
+require( DCM__PLUGIN_DIR . 'inc/customizer/customizer-control.php' );
+require( DCM__PLUGIN_DIR . 'class.wp-auto-plugin-update.php');
 
 require (DCM__PLUGIN_DIR . '/inc/customizer/astra-customizer.class.php');
 new Astra_Customizer();

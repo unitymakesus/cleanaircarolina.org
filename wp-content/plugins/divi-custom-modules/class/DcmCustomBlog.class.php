@@ -1071,7 +1071,7 @@ class GWP_Custom_Module_Blog extends ET_Builder_Module{
             '<div%5$s class="%1$s%3$s%6$s"%7$s>
 				%2$s
 			%4$s',
-            ( 'on' === $fullwidth ? 'et_pb_posts dcm_post' : 'et_pb_blog_grid clearfix' ),
+            ( 'on' === $fullwidth ? 'et_pb_posts dcm_post' : 'et_pb_blog_grid custom_title clearfix' ),
             $posts,
             esc_attr( $class ),
             ( ! $container_is_closed ? '</div> <!-- .et_pb_posts -->' : '' ),

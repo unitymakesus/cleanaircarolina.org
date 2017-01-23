@@ -1,7 +1,13 @@
 .et_pb_blog_grid {
+
+  .et_pb_post {
+    margin-bottom: 30px !important;
+  }
+
   h2 {
     text-align: left;
     color: $brand-primary !important;
+    background: none !important;
     padding: 0;
   }
 
@@ -23,5 +29,9 @@
         background: $brand-dark;
       }
     }
+  }
+
+  .et_pb_image_container {
+    margin: -19px -19px 10px;
   }
 }

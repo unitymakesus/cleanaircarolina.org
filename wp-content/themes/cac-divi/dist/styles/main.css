@@ -12238,8 +12238,8 @@ h6 {
 .call-to-action-box .title,
 .call-to-action-box h5,
 .page-callout footer .title,
-.hero-wrap .content .title,
-.hero-wrap .content p,
+.hero-wrap.hero-wrap .content .title,
+.hero-wrap.hero-wrap .content p,
 .nav-social-wrap :first-child,
 header.main .search-action-wrap button,
 footer.main .contact-info,
@@ -12262,7 +12262,7 @@ footer.main .donate-wrap h4 {
 .et_pb_section .BBFormContainer[data-bbox-part-id="4a2c37da-4692-489d-9dbf-83ce7bd0f75d"] .BBFormSubmitbutton,
 .call-to-action-box .title,
 .call-to-action-box h5,
-.hero-wrap .content p,
+.hero-wrap.hero-wrap .content p,
 .nav-common .nav > li > a,
 .nav-primary .nav > li > a,
 .nav-footer .nav > li > a,
@@ -12774,12 +12774,12 @@ footer.main .contact-info {
   }
 }
 
-.hero-wrap {
+.hero-wrap.hero-wrap {
   position: relative;
   padding-top: 120px;
 }
 
-.hero-wrap .et_pb_section_video_bg::before {
+.hero-wrap.hero-wrap .et_pb_section_video_bg::before {
   content: '';
   position: absolute;
   top: 0;
@@ -12794,30 +12794,30 @@ footer.main .contact-info {
   z-index: 1;
 }
 
-.hero-wrap > * {
+.hero-wrap.hero-wrap > * {
   z-index: 5;
 }
 
-.hero-wrap .content {
+.hero-wrap.hero-wrap .content {
   padding-bottom: 0;
 }
 
-.hero-wrap .content .title {
+.hero-wrap.hero-wrap .content .title {
   position: relative;
   text-align: center;
   text-transform: uppercase;
 }
 
-.hero-wrap .content .title span {
+.hero-wrap.hero-wrap .content .title span {
   display: block;
 }
 
-.hero-wrap .content .title span.super {
+.hero-wrap.hero-wrap .content .title span.super {
   font-size: 2vw;
   margin-bottom: .75em;
 }
 
-.hero-wrap .content .title span.curved {
+.hero-wrap.hero-wrap .content .title span.curved {
   position: relative;
   width: 80%;
   height: 110px;
@@ -12827,22 +12827,22 @@ footer.main .contact-info {
   font-weight: bold;
 }
 
-.hero-wrap .content .title span.curved span {
+.hero-wrap.hero-wrap .content .title span.curved span {
   display: inline;
 }
 
-.hero-wrap .content .title span.sub {
+.hero-wrap.hero-wrap .content .title span.sub {
   font-size: 4vw;
 }
 
-.hero-wrap .content p {
+.hero-wrap.hero-wrap .content p {
   font-size: 20px;
   max-width: 650px;
   margin: auto;
   text-align: center;
 }
 
-.hero-wrap .type-video video {
+.hero-wrap.hero-wrap .type-video video {
   max-width: 100%;
 }
 

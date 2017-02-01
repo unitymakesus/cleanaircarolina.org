@@ -30,8 +30,7 @@ header.main {
   }
 
   .logo-wrap {
-    margin-left: 20px;
-    max-width: 130px;
+    max-width: 150px;
 
     @include respondto(sm,xs) {
       margin-left: 0;
@@ -40,17 +39,19 @@ header.main {
   }
 
   .row {
-    padding-top: 20px;
+    padding-top: 10px;
+  }
+
+  .nav-col {
+    text-align: right;
+
+    & > div {
+      display: inline-block !important;
+    }
   }
 
   .search-action-wrap {
-    float: left;
     margin-top: 10px;
-
-    @include respondto(sm,xs) {
-      display: inline-block;
-      float: none;
-    }
 
     button {
       @extend .t-light;
@@ -63,13 +64,7 @@ header.main {
   }
 
   .donate-wrap {
-    float: right;
-    margin-top: 10px;
-
-    @include respondto(sm,xs) {
-      display: inline-block;
-      float: none;
-    }
+    margin: 10px 10px 0;
 
     a {
       display: block;

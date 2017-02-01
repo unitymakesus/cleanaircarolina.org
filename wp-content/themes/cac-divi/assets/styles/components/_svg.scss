@@ -4,8 +4,8 @@ svg {
   /** Abstracted to css file for better management **/
   &.svg-clean-air-carolina {
     height: auto;
-    
-    .st0{fill:#FFFFFF;}
-    .st1{fill:#0773B8;}
+
+    .st0{fill:$white;}
+    .st1{fill:$brand-primary;}
   }
 }

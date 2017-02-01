@@ -23,6 +23,7 @@
     </div>
     @php(do_action('get_footer'))
     @include('partials.footer')
+    @include('partials.back-to-top')
     @php(wp_footer())
   </body>
 </html>

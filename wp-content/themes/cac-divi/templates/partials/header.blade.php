@@ -32,15 +32,15 @@
             @endif
           </nav>
         </div>
-        <div class="search-action-wrap">
-          <button id="search-action">
-            <i class="fa fa-search"></i>
-          </button>
-        </div>
         <div class="donate-wrap">
           @php
           echo do_shortcode("[donate_button]");
           @endphp
+        </div>
+        <div class="search-action-wrap">
+          <button id="search-action">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
       </div>
     </div>

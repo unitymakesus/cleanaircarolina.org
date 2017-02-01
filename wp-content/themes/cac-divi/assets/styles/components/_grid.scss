@@ -1,4 +1,9 @@
 // Grid system
+.container-fluid {
+  max-width: 94%;
+  padding: 0;
+}
+
 .main {
   @include make-col-ready();
   @include media-breakpoint-up(sm) {

@@ -11,5 +11,6 @@ export default class Nav {
   static checkScrollTop() {
     const action = $(window).scrollTop() > 90 ? 'addClass' : 'removeClass';
     $('header.main')[action]('active');
+    $('#back-to-top')[action]('active');
   }
 }

@@ -1,4 +1,5 @@
 <?php
+use App as A;
 
 /**
  * Do not edit anything in this file unless you know what you're doing
@@ -109,9 +110,8 @@ function inline_svg_shortcode($attr) {
     if( empty( $attr['name'] ) )
         return null;
 
-    $image_asset    = get_template_directory() . '/assets/images/svg/';
-    $svg_path       = $image_asset . $attr['name'] . '.svg';
-    $svg            = file_exists( $svg_path ) ? file_get_contents( $svg_path ) : null;
+    $svg_path   = A\sage('assets')->getUri('images/svg/' . $attr['name'] . '.svg');
+    $svg        = file_get_contents( $svg_path );
 
     return $svg;
 }

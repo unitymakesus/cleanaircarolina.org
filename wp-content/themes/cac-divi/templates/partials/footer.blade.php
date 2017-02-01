@@ -1,12 +1,12 @@
 <footer class="content-info main">
   <div class="footer-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
           @include('partials.logo')
           <div class="contact-info">
             <address>
-              PO Box 5311 Charlotte, NC 28299
+              PO Box 5311<br />Charlotte, NC 28299
             </address>
             <a href="tel:7043079528">(704) 307-9528</a>
           </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-3">
           <div class="donate-wrap">
-            <h4>Help Make A Difference Today</h4>
+            <h4>Make A Difference Today</h4>
             @php
               echo do_shortcode("[donate_button]");
             @endphp
@@ -40,7 +40,7 @@
     </div>
   </div>
   <div class="footer-middle">
-    <div class="container">
+    <div class="container-fluid">
       <div class="footer-logos-wrap">
         @include('partials.footer-logos')
       </div>
@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="container">
+    <div class="container-fluid">
       <div class="pull-left">
         @php
           use App as A;

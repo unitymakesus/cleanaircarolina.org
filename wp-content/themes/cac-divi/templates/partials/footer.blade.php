@@ -39,8 +39,8 @@
       </div>
     </div>
   </div>
-  <div class="footer-middle">
-    <div class="container-fluid">
+  <div class="footer-middle container-fluid">
+    <div class="row">
       <div class="footer-logos-wrap">
         @include('partials.footer-logos')
       </div>

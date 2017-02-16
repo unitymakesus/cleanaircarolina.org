@@ -23,14 +23,22 @@
   }
 
   .et_pb_posts & {
-    padding: 19px;
-    border: 1px solid #d8d8d8;
-    background-color: #fff;
-    word-wrap: break-word;
+    :not('.single') & {
+      padding: 19px;
+      border: 1px solid #d8d8d8;
+      background-color: #fff;
+      word-wrap: break-word;
 
-    .entry-featured-image-url, .et_main_video_container {
-      margin: -19px -19px 10px;
+      .entry-featured-image-url, .et_main_video_container {
+        margin: -19px -19px 10px;
+      }
     }
+  }
+}
+
+.single {
+  .et_pb_title_container h1 {
+    text-transform: none;
   }
 }
 

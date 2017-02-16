@@ -107,6 +107,13 @@ add_action('the_post', function ($post) {
 });
 
 /**
+ * Remove unneeded CPT
+ */
+ add_action('init', function() {
+	 unregister_post_type( 'project' );
+ }, 100);
+
+/**
  * Setup Sage options
  */
 add_action('after_setup_theme', function () {

@@ -17,6 +17,20 @@
   }
 }
 
+.et_pb_contact_submit {
+  color: $white;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+.caldera-grid .btn-default {
+  @extend .btn;
+  background: $brand-primary;
+  color: $white;
+}
+
 .btn {
   border-radius: 2px;
   font-size: 12px;

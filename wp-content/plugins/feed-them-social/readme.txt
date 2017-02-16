@@ -2,8 +2,8 @@
 Contributors: slickremix
 Tags:  facebook photos, facebook reviews, facebook videos, videos, facebook albums, albums, photos facebook, photo, facebook feed, facebook posts, hastags, social, social plugin, social networking, networking, custom feed, custom facebook feed, facebook plugin, facebook group, facebook groups, events, facebook events, facebook page events, facebook group events, facebook page, facebook pages, twitter, twitter plugin, twitter hashtag, twitter #, twitter @, twitter search, vine, vine videos, vine gallery, vine plugin, vine seo, instagram, instagram plugin, feed me social, social plugin, feed, feeds, shortcode, facebook wall, slickremix, plugin, pages, posts, images, page, post, image, youtube, youtube feed, youtube channel, youtube video, youtube videos, videos, youtube embed, embed, video iframe, admin, comments, widgets, seo, wordpress, pinterest, pinterest boards, pinterest feeds, pinterest photos, pinterest widget, pinterest widgets, instagram popup, Facebook videos, facebook reviews, twitter videos
 Requires at least: 3.6.0
-Tested up to: 4.7.1
-Stable tag: 2.1.5
+Tested up to: 4.7.2
+Stable tag: 2.1.6
 
 License: GPLv2 or later
 
@@ -76,6 +76,9 @@ Feed Them Social was Developed By SlickRemix --> [https://www.slickremix.com/](h
   * Extract the zip file and drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
+= Version 2.1.6 Thursday, February 2nd, 2017 =
+   * FIXED: Facebook Mobile CSS: View on Facebook link not showing on mobile devices. Thanks to [@floppy78](https://wordpress.org/support/topic/view-on-facebook-link-disappears-on-mobiles/#post-8729449) for pointing this out to us.
+
 = Version 2.1.4 - 2.1.5 Tuesday, January 10th, 2017 =
    * NEW: Facebook Options page: Load more button will appear if you are admin of more than 25 pages so you can choose the proper access token.
    * FIXED: Facebook: Video thumbnail not showing video if clicked.

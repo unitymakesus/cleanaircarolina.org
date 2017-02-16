@@ -803,6 +803,7 @@ class FTS_Mashup_Feed extends feed_them_social_functions
                             //  $user_thumb_href = 'https://www.youtube.com/' . $youtube_name;
                             //  $user_thumb_src = 'https://yt3.ggpht.com/-Hd7qgktordw/AAAAAAAAAAI/AAAAAAAAAAA/DXefU6L9BAM/s100-c-k-no-mo-rj-c0xffffff/photo.jpg';
                             //User Name
+                            $user_name_href = 'https://www.youtube.com/channel/' . $post_data->snippet->channelId;
                             $user_name = $post_data->snippet->channelTitle;
                             //Created Time
                             $created_time = $post_data->snippet->publishedAt;

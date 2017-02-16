@@ -2,8 +2,8 @@
 Contributors: SlickRemix
 Tags:  combine posts, combine feeds, combine streams, social, social plugin, hashtags, facebook hashtags facebook, facebook plugin, facebook group, facebook page, twitter, twitter plugin, instagram, instagram plugin, youtube, youtube plugin, feed me social, feed, shortcode, slickremix, pinterest
 Requires at least: 4.5.0
-Tested up to: 4.7.1
-Stable tag: 1.0.2
+Tested up to: 4.7.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 
 Feed Them Social Combined Streams
@@ -16,6 +16,9 @@ Combine Facebook, Instagram, Twitter, Pinterest and Youtube posts in one Feed. A
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
+= Version 1.0.3 Tuesday, February 14th, 2017 =
+ * Fixed: Youtube Username was taking users to a Twitter link. Now taking them to proper YouTube link=
+
 = Version 1.0.2 Friday, January 20th, 2017 =
  * Fixed @ and # tags not linking proper when utilizing the shortcode options words=
 

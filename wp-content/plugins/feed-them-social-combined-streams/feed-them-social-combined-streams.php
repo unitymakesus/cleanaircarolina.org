@@ -3,13 +3,13 @@
 Plugin Name: Feed Them Social Combined Streams
 Plugin URI: http://slickremix.com/
 Description: This is the Combined Streams Extension for the Free version of Feed Them Social.
-Version: 1.0.2
+Version: 1.0.3
 Author: SlickRemix
 Author URI: http://slickremix.com/
 Requires at least: wordpress 4.5
 Requires at Feed Them Social: 2.1.0
-Tested up to: wordpress 4.7.1
-Stable tag: 1.0.2
+Tested up to: wordpress 4.7.2
+Stable tag: 1.0.3
 
  * @package    	Feed Them Social Combined Streams
  * @category   	Core 
@@ -19,7 +19,7 @@ Stable tag: 1.0.2
 Need Support? http://www.slickremix.com/support-forum/
 */
 
-define('FTS_COMBINED_STREAMS_CURRENT_VERSION', '1.0.2'); // Affects updater files.
+define('FTS_COMBINED_STREAMS_CURRENT_VERSION', '1.0.3'); // Affects updater files.
 
 if (!function_exists('is_plugin_active'))
     require_once(ABSPATH . '/wp-admin/includes/plugin.php');

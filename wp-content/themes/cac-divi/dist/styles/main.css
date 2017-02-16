@@ -295,9 +295,12 @@ textarea {
   }
 
   .btn > .caret,
+  .caldera-grid .btn-default > .caret,
   .comment-form input[type="submit"] > .caret,
   .search-form .search-submit > .caret,
   .dropup > .btn > .caret,
+  .caldera-grid
+  .dropup > .btn-default > .caret,
   .comment-form
   .dropup > input[type="submit"] > .caret,
   .search-form
@@ -2814,6 +2817,8 @@ select.form-control:focus::-ms-value,
 .search-form .input-group-sm > .form-control-static.search-field,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
+.caldera-grid
+  .input-group-sm > .input-group-btn > .form-control-static.btn-default,
 .comment-form
   .input-group-sm > .input-group-btn > input.form-control-static[type="submit"],
 .search-form
@@ -2827,6 +2832,8 @@ select.form-control:focus::-ms-value,
 .search-form .input-group-lg > .form-control-static.search-field,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
+.caldera-grid
+  .input-group-lg > .input-group-btn > .form-control-static.btn-default,
 .comment-form
   .input-group-lg > .input-group-btn > input.form-control-static[type="submit"],
 .search-form
@@ -2844,6 +2851,8 @@ select.form-control:focus::-ms-value,
 .search-form .input-group-sm > .search-field,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
+.caldera-grid
+.input-group-sm > .input-group-btn > .btn-default,
 .comment-form
 .input-group-sm > .input-group-btn > input[type="submit"],
 .search-form
@@ -2858,6 +2867,8 @@ select.form-control-sm:not([size]):not([multiple]),
 .search-form .input-group-sm > select.search-field:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
+.caldera-grid
+.input-group-sm > .input-group-btn > select.btn-default:not([size]):not([multiple]),
 .search-form
 .input-group-sm > .input-group-btn > select.search-submit:not([size]):not([multiple]) {
   height: 1.8125rem;
@@ -2872,6 +2883,8 @@ select.form-control-sm:not([size]):not([multiple]),
 .search-form .input-group-lg > .search-field,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
+.caldera-grid
+.input-group-lg > .input-group-btn > .btn-default,
 .comment-form
 .input-group-lg > .input-group-btn > input[type="submit"],
 .search-form
@@ -2886,6 +2899,8 @@ select.form-control-lg:not([size]):not([multiple]),
 .search-form .input-group-lg > select.search-field:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
+.caldera-grid
+.input-group-lg > .input-group-btn > select.btn-default:not([size]):not([multiple]),
 .search-form
 .input-group-lg > .input-group-btn > select.search-submit:not([size]):not([multiple]) {
   height: 3.16667rem;
@@ -3275,6 +3290,7 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn,
+.caldera-grid .btn-default,
 .comment-form input[type="submit"],
 .search-form .search-submit {
   display: inline-block;
@@ -3295,21 +3311,27 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn:focus,
+.caldera-grid .btn-default:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .btn.focus,
+.caldera-grid .focus.btn-default,
 .comment-form input.focus[type="submit"],
 .search-form .focus.search-submit,
 .btn:active:focus,
+.caldera-grid .btn-default:active:focus,
 .comment-form input[type="submit"]:active:focus,
 .search-form .search-submit:active:focus,
 .btn:active.focus,
+.caldera-grid .btn-default:active.focus,
 .comment-form input[type="submit"]:active.focus,
 .search-form .search-submit:active.focus,
 .btn.active:focus,
+.caldera-grid .active.btn-default:focus,
 .comment-form input.active[type="submit"]:focus,
 .search-form .active.search-submit:focus,
 .btn.active.focus,
+.caldera-grid .active.focus.btn-default,
 .comment-form input.active.focus[type="submit"],
 .search-form .active.focus.search-submit {
   outline: 5px auto -webkit-focus-ring-color;
@@ -3317,24 +3339,29 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn:focus,
+.caldera-grid .btn-default:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .btn:hover,
+.caldera-grid .btn-default:hover,
 .comment-form input[type="submit"]:hover,
 .search-form .search-submit:hover {
   text-decoration: none;
 }
 
 .btn.focus,
+.caldera-grid .focus.btn-default,
 .comment-form input.focus[type="submit"],
 .search-form .focus.search-submit {
   text-decoration: none;
 }
 
 .btn:active,
+.caldera-grid .btn-default:active,
 .comment-form input[type="submit"]:active,
 .search-form .search-submit:active,
 .btn.active,
+.caldera-grid .active.btn-default,
 .comment-form input.active[type="submit"],
 .search-form .active.search-submit {
   background-image: none;
@@ -3342,9 +3369,11 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn.disabled,
+.caldera-grid .disabled.btn-default,
 .comment-form input.disabled[type="submit"],
 .search-form .disabled.search-submit,
 .btn:disabled,
+.caldera-grid .btn-default:disabled,
 .comment-form input[type="submit"]:disabled,
 .search-form .search-submit:disabled {
   cursor: not-allowed;
@@ -3352,8 +3381,12 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 a.btn.disabled,
+.caldera-grid a.disabled.btn-default,
 .search-form a.disabled.search-submit,
 fieldset[disabled] a.btn,
+fieldset[disabled] .caldera-grid a.btn-default,
+.caldera-grid
+fieldset[disabled] a.btn-default,
 fieldset[disabled] .search-form a.search-submit,
 .search-form
 fieldset[disabled] a.search-submit {
@@ -4110,6 +4143,7 @@ fieldset[disabled] a.search-submit {
 
 .btn-lg,
 .btn-group-lg > .btn,
+.caldera-grid .btn-group-lg > .btn-default,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit {
   padding: 0.75rem 1.5rem;
@@ -4119,6 +4153,7 @@ fieldset[disabled] a.search-submit {
 
 .btn-sm,
 .btn-group-sm > .btn,
+.caldera-grid .btn-group-sm > .btn-default,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit {
   padding: 0.25rem 0.5rem;
@@ -4338,9 +4373,12 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn,
+.caldera-grid .btn-group > .btn-default,
 .comment-form .btn-group > input[type="submit"],
 .search-form .btn-group > .search-submit,
 .btn-group-vertical > .btn,
+.caldera-grid
+  .btn-group-vertical > .btn-default,
 .comment-form
   .btn-group-vertical > input[type="submit"],
 .search-form
@@ -4351,25 +4389,34 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn:focus,
+.caldera-grid .btn-group > .btn-default:focus,
 .comment-form .btn-group > input[type="submit"]:focus,
 .search-form .btn-group > .search-submit:focus,
 .btn-group > .btn:active,
+.caldera-grid .btn-group > .btn-default:active,
 .comment-form .btn-group > input[type="submit"]:active,
 .search-form .btn-group > .search-submit:active,
 .btn-group > .btn.active,
+.caldera-grid .btn-group > .active.btn-default,
 .comment-form .btn-group > input.active[type="submit"],
 .search-form .btn-group > .active.search-submit,
 .btn-group-vertical > .btn:focus,
+.caldera-grid
+    .btn-group-vertical > .btn-default:focus,
 .comment-form
     .btn-group-vertical > input[type="submit"]:focus,
 .search-form
     .btn-group-vertical > .search-submit:focus,
 .btn-group-vertical > .btn:active,
+.caldera-grid
+    .btn-group-vertical > .btn-default:active,
 .comment-form
     .btn-group-vertical > input[type="submit"]:active,
 .search-form
     .btn-group-vertical > .search-submit:active,
 .btn-group-vertical > .btn.active,
+.caldera-grid
+    .btn-group-vertical > .active.btn-default,
 .comment-form
     .btn-group-vertical > input.active[type="submit"],
 .search-form
@@ -4378,9 +4425,12 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn:hover,
+.caldera-grid .btn-group > .btn-default:hover,
 .comment-form .btn-group > input[type="submit"]:hover,
 .search-form .btn-group > .search-submit:hover,
 .btn-group-vertical > .btn:hover,
+.caldera-grid
+    .btn-group-vertical > .btn-default:hover,
 .comment-form
     .btn-group-vertical > input[type="submit"]:hover,
 .search-form
@@ -4389,12 +4439,30 @@ tbody.collapse.in {
 }
 
 .btn-group .btn + .btn,
+.btn-group .caldera-grid .btn-default + .btn,
+.caldera-grid .btn-group .btn-default + .btn,
 .btn-group .comment-form input[type="submit"] + .btn,
 .comment-form .btn-group input[type="submit"] + .btn,
 .btn-group .search-form .search-submit + .btn,
 .search-form .btn-group .search-submit + .btn,
+.btn-group .caldera-grid .btn + .btn-default,
+.caldera-grid .btn-group .btn + .btn-default,
+.btn-group .caldera-grid .btn-default + .btn-default,
+.caldera-grid .btn-group .btn-default + .btn-default,
+.btn-group .comment-form .caldera-grid input[type="submit"] + .btn-default,
+.caldera-grid .btn-group .comment-form input[type="submit"] + .btn-default,
+.comment-form .btn-group .caldera-grid input[type="submit"] + .btn-default,
+.caldera-grid .comment-form .btn-group input[type="submit"] + .btn-default,
+.btn-group .search-form .caldera-grid .search-submit + .btn-default,
+.caldera-grid .btn-group .search-form .search-submit + .btn-default,
+.search-form .btn-group .caldera-grid .search-submit + .btn-default,
+.caldera-grid .search-form .btn-group .search-submit + .btn-default,
 .btn-group .comment-form .btn + input[type="submit"],
 .comment-form .btn-group .btn + input[type="submit"],
+.btn-group .caldera-grid .comment-form .btn-default + input[type="submit"],
+.comment-form .btn-group .caldera-grid .btn-default + input[type="submit"],
+.caldera-grid .btn-group .comment-form .btn-default + input[type="submit"],
+.comment-form .caldera-grid .btn-group .btn-default + input[type="submit"],
 .btn-group .comment-form input[type="submit"] + input[type="submit"],
 .comment-form .btn-group input[type="submit"] + input[type="submit"],
 .btn-group .search-form .comment-form .search-submit + input[type="submit"],
@@ -4403,6 +4471,10 @@ tbody.collapse.in {
 .comment-form .search-form .btn-group .search-submit + input[type="submit"],
 .btn-group .search-form .btn + .search-submit,
 .search-form .btn-group .btn + .search-submit,
+.btn-group .caldera-grid .search-form .btn-default + .search-submit,
+.search-form .btn-group .caldera-grid .btn-default + .search-submit,
+.caldera-grid .btn-group .search-form .btn-default + .search-submit,
+.search-form .caldera-grid .btn-group .btn-default + .search-submit,
 .btn-group .comment-form .search-form input[type="submit"] + .search-submit,
 .search-form .btn-group .comment-form input[type="submit"] + .search-submit,
 .comment-form .btn-group .search-form input[type="submit"] + .search-submit,
@@ -4410,6 +4482,9 @@ tbody.collapse.in {
 .btn-group .search-form .search-submit + .search-submit,
 .search-form .btn-group .search-submit + .search-submit,
 .btn-group .btn + .btn-group,
+.btn-group .caldera-grid .btn-default + .btn-group,
+.caldera-grid
+.btn-group .btn-default + .btn-group,
 .btn-group .comment-form input[type="submit"] + .btn-group,
 .comment-form
 .btn-group input[type="submit"] + .btn-group,
@@ -4417,6 +4492,9 @@ tbody.collapse.in {
 .search-form
 .btn-group .search-submit + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .caldera-grid .btn-group + .btn-default,
+.caldera-grid
+.btn-group .btn-group + .btn-default,
 .btn-group .comment-form .btn-group + input[type="submit"],
 .comment-form
 .btn-group .btn-group + input[type="submit"],
@@ -4443,6 +4521,7 @@ tbody.collapse.in {
 }
 
 .btn-toolbar > .btn,
+.caldera-grid .btn-toolbar > .btn-default,
 .comment-form .btn-toolbar > input[type="submit"],
 .search-form .btn-toolbar > .search-submit,
 .btn-toolbar > .btn-group,
@@ -4451,18 +4530,21 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.caldera-grid .btn-group > .btn-default:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .comment-form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .search-form .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 .btn-group > .btn:first-child,
+.caldera-grid .btn-group > .btn-default:first-child,
 .comment-form .btn-group > input[type="submit"]:first-child,
 .search-form .btn-group > .search-submit:first-child {
   margin-left: 0;
 }
 
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.caldera-grid .btn-group > .btn-default:first-child:not(:last-child):not(.dropdown-toggle),
 .comment-form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle),
 .search-form .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
@@ -4470,6 +4552,7 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn:last-child:not(:first-child),
+.caldera-grid .btn-group > .btn-default:last-child:not(:first-child),
 .comment-form .btn-group > input[type="submit"]:last-child:not(:first-child),
 .search-form .btn-group > .search-submit:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
@@ -4482,12 +4565,14 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn,
+.caldera-grid .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-default,
 .comment-form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"],
 .search-form .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit {
   border-radius: 0;
 }
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.caldera-grid .btn-group > .btn-group:first-child:not(:last-child) > .btn-default:last-child,
 .comment-form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .search-form .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
@@ -4496,6 +4581,7 @@ tbody.collapse.in {
 }
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.caldera-grid .btn-group > .btn-group:last-child:not(:first-child) > .btn-default:first-child,
 .comment-form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child,
 .search-form .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child {
   border-bottom-left-radius: 0;
@@ -4508,6 +4594,7 @@ tbody.collapse.in {
 }
 
 .btn + .dropdown-toggle-split,
+.caldera-grid .btn-default + .dropdown-toggle-split,
 .comment-form input[type="submit"] + .dropdown-toggle-split,
 .search-form .search-submit + .dropdown-toggle-split {
   padding-right: 0.75rem;
@@ -4515,6 +4602,7 @@ tbody.collapse.in {
 }
 
 .btn + .dropdown-toggle-split::after,
+.caldera-grid .btn-default + .dropdown-toggle-split::after,
 .comment-form input[type="submit"] + .dropdown-toggle-split::after,
 .search-form .search-submit + .dropdown-toggle-split::after {
   margin-left: 0;
@@ -4522,6 +4610,7 @@ tbody.collapse.in {
 
 .btn-sm + .dropdown-toggle-split,
 .btn-group-sm > .btn + .dropdown-toggle-split,
+.caldera-grid .btn-group-sm > .btn-default + .dropdown-toggle-split,
 .comment-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split,
 .search-form .btn-group-sm > .search-submit + .dropdown-toggle-split {
   padding-right: 0.375rem;
@@ -4530,6 +4619,7 @@ tbody.collapse.in {
 
 .btn-lg + .dropdown-toggle-split,
 .btn-group-lg > .btn + .dropdown-toggle-split,
+.caldera-grid .btn-group-lg > .btn-default + .dropdown-toggle-split,
 .comment-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split,
 .search-form .btn-group-lg > .search-submit + .dropdown-toggle-split {
   padding-right: 1.125rem;
@@ -4537,6 +4627,7 @@ tbody.collapse.in {
 }
 
 .btn .caret,
+.caldera-grid .btn-default .caret,
 .comment-form input[type="submit"] .caret,
 .search-form .search-submit .caret {
   margin-left: 0;
@@ -4544,6 +4635,7 @@ tbody.collapse.in {
 
 .btn-lg .caret,
 .btn-group-lg > .btn .caret,
+.caldera-grid .btn-group-lg > .btn-default .caret,
 .comment-form .btn-group-lg > input[type="submit"] .caret,
 .search-form .btn-group-lg > .search-submit .caret {
   border-width: 0.3em 0.3em 0;
@@ -4552,6 +4644,8 @@ tbody.collapse.in {
 
 .dropup .btn-lg .caret,
 .dropup .btn-group-lg > .btn .caret,
+.dropup .caldera-grid .btn-group-lg > .btn-default .caret,
+.caldera-grid .dropup .btn-group-lg > .btn-default .caret,
 .dropup .comment-form .btn-group-lg > input[type="submit"] .caret,
 .comment-form .dropup .btn-group-lg > input[type="submit"] .caret,
 .dropup .search-form .btn-group-lg > .search-submit .caret,
@@ -4560,10 +4654,13 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn,
+.caldera-grid .btn-group-vertical > .btn-default,
 .comment-form .btn-group-vertical > input[type="submit"],
 .search-form .btn-group-vertical > .search-submit,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
+.caldera-grid
+.btn-group-vertical > .btn-group > .btn-default,
 .comment-form
 .btn-group-vertical > .btn-group > input[type="submit"],
 .search-form
@@ -4581,28 +4678,44 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn-group > .btn,
+.caldera-grid .btn-group-vertical > .btn-group > .btn-default,
 .comment-form .btn-group-vertical > .btn-group > input[type="submit"],
 .search-form .btn-group-vertical > .btn-group > .search-submit {
   float: none;
 }
 
 .btn-group-vertical > .btn + .btn,
+.caldera-grid .btn-group-vertical > .btn-default + .btn,
 .comment-form .btn-group-vertical > input[type="submit"] + .btn,
 .search-form .btn-group-vertical > .search-submit + .btn,
+.caldera-grid .btn-group-vertical > .btn + .btn-default,
+.caldera-grid .btn-group-vertical > .btn-default + .btn-default,
+.comment-form .caldera-grid .btn-group-vertical > input[type="submit"] + .btn-default,
+.caldera-grid .comment-form .btn-group-vertical > input[type="submit"] + .btn-default,
+.search-form .caldera-grid .btn-group-vertical > .search-submit + .btn-default,
+.caldera-grid .search-form .btn-group-vertical > .search-submit + .btn-default,
 .comment-form .btn-group-vertical > .btn + input[type="submit"],
+.caldera-grid .comment-form .btn-group-vertical > .btn-default + input[type="submit"],
+.comment-form .caldera-grid .btn-group-vertical > .btn-default + input[type="submit"],
 .comment-form .btn-group-vertical > input[type="submit"] + input[type="submit"],
 .search-form .comment-form .btn-group-vertical > .search-submit + input[type="submit"],
 .comment-form .search-form .btn-group-vertical > .search-submit + input[type="submit"],
 .search-form .btn-group-vertical > .btn + .search-submit,
+.caldera-grid .search-form .btn-group-vertical > .btn-default + .search-submit,
+.search-form .caldera-grid .btn-group-vertical > .btn-default + .search-submit,
 .comment-form .search-form .btn-group-vertical > input[type="submit"] + .search-submit,
 .search-form .comment-form .btn-group-vertical > input[type="submit"] + .search-submit,
 .search-form .btn-group-vertical > .search-submit + .search-submit,
 .btn-group-vertical > .btn + .btn-group,
+.caldera-grid
+.btn-group-vertical > .btn-default + .btn-group,
 .comment-form
 .btn-group-vertical > input[type="submit"] + .btn-group,
 .search-form
 .btn-group-vertical > .search-submit + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.caldera-grid
+.btn-group-vertical > .btn-group + .btn-default,
 .comment-form
 .btn-group-vertical > .btn-group + input[type="submit"],
 .search-form
@@ -4613,12 +4726,14 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child),
+.caldera-grid .btn-group-vertical > .btn-default:not(:first-child):not(:last-child),
 .comment-form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child),
 .search-form .btn-group-vertical > .search-submit:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
 .btn-group-vertical > .btn:first-child:not(:last-child),
+.caldera-grid .btn-group-vertical > .btn-default:first-child:not(:last-child),
 .comment-form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child),
 .search-form .btn-group-vertical > .search-submit:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
@@ -4626,6 +4741,7 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn:last-child:not(:first-child),
+.caldera-grid .btn-group-vertical > .btn-default:last-child:not(:first-child),
 .comment-form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child),
 .search-form .btn-group-vertical > .search-submit:last-child:not(:first-child) {
   border-top-right-radius: 0;
@@ -4633,12 +4749,14 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn,
+.caldera-grid .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-default,
 .comment-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"],
 .search-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit {
   border-radius: 0;
 }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.caldera-grid .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-default:last-child,
 .comment-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .search-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
@@ -4647,6 +4765,7 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.caldera-grid .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-default:first-child,
 .comment-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child,
 .search-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child {
   border-top-right-radius: 0;
@@ -4654,19 +4773,26 @@ tbody.collapse.in {
 }
 
 [data-toggle="buttons"] > .btn input[type="radio"],
+.caldera-grid [data-toggle="buttons"] > .btn-default input[type="radio"],
 .comment-form [data-toggle="buttons"] > input[type="submit"] input[type="radio"],
 .search-form [data-toggle="buttons"] > .search-submit input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
+.caldera-grid
+[data-toggle="buttons"] > .btn-default input[type="checkbox"],
 .comment-form
 [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
 .search-form
 [data-toggle="buttons"] > .search-submit input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+.caldera-grid
+[data-toggle="buttons"] > .btn-group > .btn-default input[type="radio"],
 .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
 .search-form
 [data-toggle="buttons"] > .btn-group > .search-submit input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+.caldera-grid
+[data-toggle="buttons"] > .btn-group > .btn-default input[type="checkbox"],
 .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"],
 .search-form
@@ -4802,6 +4928,8 @@ tbody.collapse.in {
 .search-form .input-group-sm > .input-group-addon.search-field,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
+.caldera-grid
+  .input-group-sm > .input-group-btn > .input-group-addon.btn-default,
 .comment-form
   .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
 .search-form
@@ -4819,6 +4947,8 @@ tbody.collapse.in {
 .search-form .input-group-lg > .input-group-addon.search-field,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
+.caldera-grid
+  .input-group-lg > .input-group-btn > .input-group-addon.btn-default,
 .comment-form
   .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
 .search-form
@@ -4849,22 +4979,30 @@ tbody.collapse.in {
 .search-form .input-group .search-field:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
+.caldera-grid
+.input-group-btn:not(:last-child) > .btn-default,
 .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"],
 .search-form
 .input-group-btn:not(:last-child) > .search-submit,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
+.caldera-grid
+.input-group-btn:not(:last-child) > .btn-group > .btn-default,
 .comment-form
 .input-group-btn:not(:last-child) > .btn-group > input[type="submit"],
 .search-form
 .input-group-btn:not(:last-child) > .btn-group > .search-submit,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.caldera-grid
+.input-group-btn:not(:first-child) > .btn-default:not(:last-child):not(.dropdown-toggle),
 .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
 .search-form
 .input-group-btn:not(:first-child) > .search-submit:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
+.caldera-grid
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn-default,
 .comment-form
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"],
 .search-form
@@ -4893,22 +5031,30 @@ tbody.collapse.in {
 .search-form .input-group .search-field:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
+.caldera-grid
+.input-group-btn:not(:first-child) > .btn-default,
 .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"],
 .search-form
 .input-group-btn:not(:first-child) > .search-submit,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
+.caldera-grid
+.input-group-btn:not(:first-child) > .btn-group > .btn-default,
 .comment-form
 .input-group-btn:not(:first-child) > .btn-group > input[type="submit"],
 .search-form
 .input-group-btn:not(:first-child) > .btn-group > .search-submit,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
+.caldera-grid
+.input-group-btn:not(:last-child) > .btn-default:not(:first-child),
 .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child),
 .search-form
 .input-group-btn:not(:last-child) > .search-submit:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
+.caldera-grid
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn-default,
 .comment-form
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"],
 .search-form
@@ -4933,19 +5079,31 @@ tbody.collapse.in {
 }
 
 .input-group-btn > .btn,
+.caldera-grid .input-group-btn > .btn-default,
 .comment-form .input-group-btn > input[type="submit"],
 .search-form .input-group-btn > .search-submit {
   position: relative;
 }
 
 .input-group-btn > .btn + .btn,
+.caldera-grid .input-group-btn > .btn-default + .btn,
 .comment-form .input-group-btn > input[type="submit"] + .btn,
 .search-form .input-group-btn > .search-submit + .btn,
+.caldera-grid .input-group-btn > .btn + .btn-default,
+.caldera-grid .input-group-btn > .btn-default + .btn-default,
+.comment-form .caldera-grid .input-group-btn > input[type="submit"] + .btn-default,
+.caldera-grid .comment-form .input-group-btn > input[type="submit"] + .btn-default,
+.search-form .caldera-grid .input-group-btn > .search-submit + .btn-default,
+.caldera-grid .search-form .input-group-btn > .search-submit + .btn-default,
 .comment-form .input-group-btn > .btn + input[type="submit"],
+.caldera-grid .comment-form .input-group-btn > .btn-default + input[type="submit"],
+.comment-form .caldera-grid .input-group-btn > .btn-default + input[type="submit"],
 .comment-form .input-group-btn > input[type="submit"] + input[type="submit"],
 .search-form .comment-form .input-group-btn > .search-submit + input[type="submit"],
 .comment-form .search-form .input-group-btn > .search-submit + input[type="submit"],
 .search-form .input-group-btn > .btn + .search-submit,
+.caldera-grid .search-form .input-group-btn > .btn-default + .search-submit,
+.search-form .caldera-grid .input-group-btn > .btn-default + .search-submit,
 .comment-form .search-form .input-group-btn > input[type="submit"] + .search-submit,
 .search-form .comment-form .input-group-btn > input[type="submit"] + .search-submit,
 .search-form .input-group-btn > .search-submit + .search-submit {
@@ -4953,18 +5111,22 @@ tbody.collapse.in {
 }
 
 .input-group-btn > .btn:focus,
+.caldera-grid .input-group-btn > .btn-default:focus,
 .comment-form .input-group-btn > input[type="submit"]:focus,
 .search-form .input-group-btn > .search-submit:focus,
 .input-group-btn > .btn:active,
+.caldera-grid .input-group-btn > .btn-default:active,
 .comment-form .input-group-btn > input[type="submit"]:active,
 .search-form .input-group-btn > .search-submit:active,
 .input-group-btn > .btn:hover,
+.caldera-grid .input-group-btn > .btn-default:hover,
 .comment-form .input-group-btn > input[type="submit"]:hover,
 .search-form .input-group-btn > .search-submit:hover {
   z-index: 3;
 }
 
 .input-group-btn:not(:last-child) > .btn,
+.caldera-grid .input-group-btn:not(:last-child) > .btn-default,
 .comment-form .input-group-btn:not(:last-child) > input[type="submit"],
 .search-form .input-group-btn:not(:last-child) > .search-submit,
 .input-group-btn:not(:last-child) > .btn-group {
@@ -4972,6 +5134,7 @@ tbody.collapse.in {
 }
 
 .input-group-btn:not(:first-child) > .btn,
+.caldera-grid .input-group-btn:not(:first-child) > .btn-default,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"],
 .search-form .input-group-btn:not(:first-child) > .search-submit,
 .input-group-btn:not(:first-child) > .btn-group {
@@ -4980,12 +5143,15 @@ tbody.collapse.in {
 }
 
 .input-group-btn:not(:first-child) > .btn:focus,
+.caldera-grid .input-group-btn:not(:first-child) > .btn-default:focus,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:focus,
 .search-form .input-group-btn:not(:first-child) > .search-submit:focus,
 .input-group-btn:not(:first-child) > .btn:active,
+.caldera-grid .input-group-btn:not(:first-child) > .btn-default:active,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:active,
 .search-form .input-group-btn:not(:first-child) > .search-submit:active,
 .input-group-btn:not(:first-child) > .btn:hover,
+.caldera-grid .input-group-btn:not(:first-child) > .btn-default:hover,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:hover,
 .search-form .input-group-btn:not(:first-child) > .search-submit:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
@@ -6455,6 +6621,7 @@ header.main .nav
 }
 
 .btn .tag,
+.caldera-grid .btn-default .tag,
 .comment-form input[type="submit"] .tag,
 .search-form .search-submit .tag {
   position: relative;
@@ -7847,6 +8014,8 @@ button.close {
 }
 
 .carousel-caption .btn,
+.carousel-caption .caldera-grid .btn-default,
+.caldera-grid .carousel-caption .btn-default,
 .carousel-caption .comment-form input[type="submit"],
 .comment-form .carousel-caption input[type="submit"],
 .carousel-caption .search-form .search-submit,
@@ -12431,7 +12600,21 @@ ul [class*="icon"] .back-to-top a {
   background: #a55020;
 }
 
+.et_pb_contact_submit {
+  color: #fff;
+}
+
+.et_pb_contact_submit:hover {
+  color: #1576B9;
+}
+
+.caldera-grid .btn-default {
+  background: #1576B9;
+  color: #fff;
+}
+
 .btn,
+.caldera-grid .btn-default,
 .comment-form input[type="submit"],
 .search-form .search-submit {
   border-radius: 2px;
@@ -13599,6 +13782,22 @@ header.main .donate-wrap a {
   height: inherit;
 }
 
+.widget_collapsarch .collapsing ul {
+  margin-left: 1em;
+}
+
+.textwidget .btn,
+.textwidget .caldera-grid .btn-default,
+.caldera-grid .textwidget .btn-default,
+.textwidget .comment-form input[type="submit"],
+.comment-form .textwidget input[type="submit"],
+.textwidget .search-form .search-submit,
+.search-form .textwidget .search-submit {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+
 footer.main .footer-top {
   background: #1576B9;
 }
@@ -13809,16 +14008,20 @@ footer.main .search-form-wrap {
   background: #064264;
 }
 
-.et_pb_posts .et_pb_post {
+:not('.single') .et_pb_posts .et_pb_post {
   padding: 19px;
   border: 1px solid #d8d8d8;
   background-color: #fff;
   word-wrap: break-word;
 }
 
-.et_pb_posts .et_pb_post .entry-featured-image-url,
-.et_pb_posts .et_pb_post .et_main_video_container {
+:not('.single') .et_pb_posts .et_pb_post .entry-featured-image-url,
+:not('.single') .et_pb_posts .et_pb_post .et_main_video_container {
   margin: -19px -19px 10px;
+}
+
+.single .et_pb_title_container h1 {
+  text-transform: none;
 }
 
 .et_pb_blog_grid h2 {

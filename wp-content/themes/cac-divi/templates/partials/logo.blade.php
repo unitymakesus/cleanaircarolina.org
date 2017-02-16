@@ -4,7 +4,9 @@
 @endphp
 
 <div class="logo-wrap">
-  @if ($logo !== FALSE)
-    {!! $logo !!}
-  @endif
+  <a class="brand" href="{{ esc_url( home_url( '/' ) ) }}">
+    @if ($logo !== FALSE)
+      {!! $logo !!}
+    @endif
+  </a>
 </div>

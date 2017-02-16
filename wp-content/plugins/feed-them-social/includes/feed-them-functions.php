@@ -331,7 +331,7 @@ class feed_them_social_functions
             // this div returns outputs our ajax request via jquery append html from above
 
             print '<div class="clear"></div>';
-            print '<div id="output_' . $fts_dynamic_name . '"></div>';
+            print '<div id="output_' . $fts_dynamic_name . '" class="fts-hide"></div>';
 
             print '<div class="clear"></div>';
 

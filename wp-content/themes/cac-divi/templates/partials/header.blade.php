@@ -2,9 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-2 logo-col">
-        <a class="brand" href="{{ home_url('/') }}">
-          @include('partials.logo')
-        </a>
+        @include('partials.logo')
       </div>
       <div class="col-xs-8 col-sm-8 col-md-10 nav-col">
         <button class="navbar-toggler hidden-lg-up btn btn-primary"

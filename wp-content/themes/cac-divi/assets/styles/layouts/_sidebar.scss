@@ -1,0 +1,21 @@
+.widget_collapsarch {
+  .collapse {
+    display: inherit;
+  }
+
+  .collapsing {
+    height: inherit;
+
+    ul {
+      margin-left: 1em;
+    }
+  }
+}
+
+.textwidget {
+  .btn {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 2em;
+  }
+}

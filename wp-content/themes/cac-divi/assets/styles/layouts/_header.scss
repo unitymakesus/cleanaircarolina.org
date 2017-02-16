@@ -5,7 +5,7 @@ header.main .nav a {
   @extend .nav-link;
 }
 
-$header-height: 90px;
+$header-height: 100px;
 header.main {
   background: transparent;
   height: $header-height;
@@ -30,7 +30,7 @@ header.main {
   }
 
   .logo-wrap {
-    max-width: 150px;
+    max-width: 170px;
 
     @include respondto(sm,xs) {
       margin-left: 0;

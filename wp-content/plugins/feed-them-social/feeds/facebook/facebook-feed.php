@@ -1800,7 +1800,7 @@ style="margin:' . (isset($FB_Shortcode['slider_margin']) && $FB_Shortcode['slide
                 $LOADMORE_OUPUT .= 'console.log("Well Done and got this from sever: " + data);';
                 if ($FBtype && $FB_Shortcode['type'] == 'albums' || $FBtype && $FB_Shortcode['type'] == 'album_photos' && $FB_Shortcode['video_album'] !== 'yes' || $FB_Shortcode['grid'] == 'yes') {
                     $LOADMORE_OUPUT .= 'jQuery(".' . $fts_dynamic_class_name . '").append(data).filter(".' . $fts_dynamic_class_name . '").html();';
-                    if (isset($FB_Shortcode['image_stack_animation']) && $FB_Shortcode['image_stack_animation'] == 'yes') {
+                   // if (isset($FB_Shortcode['image_stack_animation']) && $FB_Shortcode['image_stack_animation'] == 'yes' || isset($FB_Shortcode['image_stack_animation']) && $FB_Shortcode['image_stack_animation'] == 'no') {
                         $LOADMORE_OUPUT .= 'jQuery(".' . $fts_dynamic_class_name . '").masonry( "reloadItems");';
 
                         $LOADMORE_OUPUT .= 'setTimeout(function() {';
@@ -1808,7 +1808,7 @@ style="margin:' . (isset($FB_Shortcode['slider_margin']) && $FB_Shortcode['slide
                         // This can be direct code, or call to some other function
                         $LOADMORE_OUPUT .= 'jQuery(".' . $fts_dynamic_class_name . '").masonry("layout");';
                         $LOADMORE_OUPUT .= '}, 500);';
-                    }
+                  //  }
                     $LOADMORE_OUPUT .= 'if(!nextURL_' . $_REQUEST['fts_dynamic_name'] . ' || nextURL_' . $_REQUEST['fts_dynamic_name'] . ' == "no more"){';
                     if ($FB_Shortcode['type'] == 'reviews') {
                         $LOADMORE_OUPUT .= 'jQuery("#loadMore_' . $fts_dynamic_name . '").replaceWith(\'<div class="fts-fb-load-more no-more-posts-fts-fb">' . __('No More Reviews', 'feed-them-social') . '</div>\');';
@@ -1863,7 +1863,7 @@ style="margin:' . (isset($FB_Shortcode['slider_margin']) && $FB_Shortcode['slide
             if (!isset($_GET['load_more_ajaxing'])) {
                 $fts_dynamic_name = $_REQUEST['fts_dynamic_name'];
                 // this div returns outputs our ajax request via jquery appenc html from above  style="display:nonee;"
-                $LOADMORE_OUPUT .= '<div id="output_' . $fts_dynamic_name . '"></div>';
+                $LOADMORE_OUPUT .= '<div id="output_' . $fts_dynamic_name . '" class="fts-hide"></div>';
                 if ((is_plugin_active('feed-them-premium/feed-them-premium.php') && $FB_Shortcode['type'] !== 'reviews' || is_plugin_active('feed-them-social-facebook-reviews/feed-them-social-facebook-reviews.php') && $FB_Shortcode['type'] == 'reviews') && $FB_Shortcode['loadmore'] == 'autoscroll') {
                     $LOADMORE_OUPUT .= '<div id="loadMore_' . $fts_dynamic_name . '" class="fts-fb-load-more fts-fb-autoscroll-loader">Facebook</div>';
                 }

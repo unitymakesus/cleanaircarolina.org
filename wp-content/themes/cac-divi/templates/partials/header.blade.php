@@ -16,12 +16,12 @@
         </button>
         <div class="collapse nav-primary-wrap navbar-toggleable-md" id="exCollapsingNavbar">
           <button class="navbar-toggler hidden-lg-up btn btn-primary"
-          type="button"
-          data-toggle="collapse"
-          data-target="#exCollapsingNavbar"
-          aria-controls="exCollapsingNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#exCollapsingNavbar"
+                  aria-controls="exCollapsingNavbar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
             <i class="fa fa-times"></i>
           </button>
           <nav class="nav-primary">

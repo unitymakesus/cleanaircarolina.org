@@ -25,6 +25,13 @@
   }
 }
 
+.et_pb_bg_layout_dark {
+  .et_pb_button {
+    background: $white;
+    color: $brand-primary;
+  }
+}
+
 .caldera-grid .btn-default {
   @extend .btn;
   background: $brand-primary;

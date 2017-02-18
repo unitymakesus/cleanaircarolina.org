@@ -33,11 +33,6 @@ header.main {
 
   .logo-wrap {
     max-width: 170px;
-
-    @include respondto(sm,xs) {
-      margin-left: 0;
-      max-width:100%;
-    }
   }
 
   .row {

@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "00025cd3501b54a3bf20"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9c50968d65fe3bd325d5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -8439,15 +8439,19 @@ Nav.checkScrollTop = function checkScrollTop () {
       $('#search-popover').addClass('visible').find('.search-field').focus();
     }
 
-    function blurHide() {
+    function timeoutHide() {
       $('#search-popover').removeClass('visible');
+    }
+
+    function blurTimeout() {
+      window.setTimeout(timeoutHide, 200);
     }
 
     // Toggle search button to show search field
     $('#search-action').on(clickortap, showFocus);
 
     // Hide header search field when it loses focus
-    $('#search-popover').on('blur', window.setTimeout(blurHide, 200));
+    $('#search-popover input').on('blur', blurTimeout);
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

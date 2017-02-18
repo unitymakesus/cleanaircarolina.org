@@ -1,8 +1,8 @@
 <?php
-class CAC_Custom_Module_Blog extends ET_Builder_Module {
+class CAC_Custom_Module_Search extends ET_Builder_Module {
   function init() {
-    $this->name = esc_html__( 'Blog - Auto Archive', 'et_builder' );
-    $this->slug = 'et_pb_blog_archive';
+    $this->name = esc_html__( 'Search Results', 'et_builder' );
+    $this->slug = 'et_pb_search_results';
     $this->fb_support = true;
 
     $this->whitelisted_fields = array(
@@ -31,7 +31,7 @@ class CAC_Custom_Module_Blog extends ET_Builder_Module {
     );
 
     $this->fields_defaults = array(
-      'fullwidth' => array( 'off' ),
+      'fullwidth' => array( 'on' ),
       'posts_number' => array( 10, 'add_default_setting' ),
       'meta_date' => array( 'M j, Y', 'add_default_setting' ),
       'show_thumbnail' => array( 'on' ),
@@ -423,7 +423,7 @@ class CAC_Custom_Module_Blog extends ET_Builder_Module {
       $paged = $et_paged;
     }
 
-    $args['cat'] = get_query_var('cat');
+    $args['s'] = get_query_var('s');
 
     if ( ! is_search() ) {
       $args['paged'] = $et_paged;
@@ -643,4 +643,4 @@ class CAC_Custom_Module_Blog extends ET_Builder_Module {
     return $output;
   }
 }
-new CAC_Custom_Module_Blog;
+new CAC_Custom_Module_Search;

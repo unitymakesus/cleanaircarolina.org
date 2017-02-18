@@ -2,11 +2,13 @@
   border: 0;
   @include aspect-ratio(4, 3);
   transition: all .3s ease;
+  max-width: 100%;
 
   .et_pb_blurb_content {
     position: absolute;
     height: 100%;
     overflow: hidden;
+    width: 100%;
   }
 
   .et_pb_main_blurb_image {

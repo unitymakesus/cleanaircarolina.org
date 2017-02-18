@@ -2,6 +2,7 @@
   display: none;
   position: absolute;
   top: calc(100% + 20px);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
   right: 0;
 
   &.visible {
@@ -52,6 +53,7 @@ form.search-form {
     right: 0;
     top: 0;
     width: $submit-width;
+    font-size: 12px;
 
     &:hover, &:active, &:focus {
       background: $brand-dark;

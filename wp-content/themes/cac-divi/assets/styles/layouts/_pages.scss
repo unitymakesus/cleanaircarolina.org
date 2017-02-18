@@ -2,7 +2,7 @@
   .et_pb_page_header_0.et_pb_fullwidth_header {
     padding-top: 120px;
   }
-  
+
   .et_pb_section_0.et_pb_fullwidth_section {
     .et_pb_fullwidth_header {
       padding-top: 120px;
@@ -19,6 +19,23 @@
   .et_pb_testimonial_description_inner {
     text-align: center;
     font-size: 20px;
+  }
+}
+
+.nc-breathe-conference {
+  .et_pb_team_member_image {
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 1.5em;
+  }
+
+  .et_pb_blurb {
+    overflow: hidden;
+  }
+
+  .et_pb_main_blurb_image {
+    float: left;
+    margin-right: 12px;
   }
 }
 

@@ -39,6 +39,10 @@
           <button id="search-action">
             <i class="fa fa-search"></i>
           </button>
+
+          <div id="search-popover" class="search-popover">
+            {!! get_search_form() !!}
+          </div>
         </div>
       </div>
     </div>

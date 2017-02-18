@@ -1,8 +1,28 @@
+.search-popover {
+  display: none;
+  position: absolute;
+  top: calc(100% + 20px);
+  right: 0;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.search-action-wrap {
+  position: relative;
+}
+
 $submit-width: 115px;
 form.search-form {
   border: 2px solid $border-dark;
   border-radius: 2px;
   position: relative;
+
+  .search-popover & {
+    border-color: $white;
+    background: $white;
+  }
 
   label {
     padding-right: $submit-width;
@@ -14,6 +34,10 @@ form.search-form {
     height: auto;
     border: none;
     width: 100%;
+
+    .search-popover & {
+      width: 200px;
+    }
   }
 
   input[type=submit] {

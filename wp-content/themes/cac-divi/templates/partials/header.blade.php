@@ -1,10 +1,10 @@
 <header class="main">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-4 col-sm-4 col-md-2 logo-col">
+      <div class="col-xs-5 col-sm-5 col-md-3 col-lg-2 logo-col">
         @include('partials.logo')
       </div>
-      <div class="col-xs-8 col-sm-8 col-md-10 nav-col">
+      <div class="col-xs-7 col-sm-7 col-md-9 col-lg-10 nav-col">
         <button class="navbar-toggler hidden-lg-up btn btn-primary"
                 type="button"
                 data-toggle="collapse"

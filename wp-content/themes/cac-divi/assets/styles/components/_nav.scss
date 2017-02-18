@@ -1,12 +1,16 @@
 .nav-common {
-  .nav > li {
+  li {
     list-style: none;
     position: relative;
 
-    & > a {
+    a, a:not([href]) {
       @extend .t-shadowed;
       color: $white;
       display: block;
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 }
@@ -15,53 +19,45 @@ $number_of_links: 5;
 .nav-primary {
   @extend .nav-common;
 
-  .nav {
-    text-align: right;
+  li {
+    display: inline-block;
 
-    & > li {
-      display: inline-block;
+    a {
+      background: transparent;
+      padding: 8px 15px 13px;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: background 400ms ease;
+    }
+
+    &.et-hover, &:hover {
+      .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, -5px, 0);
+      }
+    }
+
+    .sub-menu {
+      padding: 0;
+      border-bottom: 3px solid $brand-dark;
+      border-top: none;
+      transition: all .3s ease;
+
+      li {
+        display: block;
+        padding: 0;
+      }
 
       a {
-        background: transparent;
-        padding: 8px 15px;
-        line-height: 1;
-        text-transform: uppercase;
-        transition: background 400ms ease;
+        display: block;
+        text-transform: none;
+        color: $brand-primary;
+        text-shadow: none;
 
         &:hover {
+          background: $brand-primary;
           color: $white;
-        }
-      }
-
-      & > a {
-        padding-bottom: 13px;
-      }
-
-      &.et-hover, &:hover {
-        .sub-menu {
-          visibility: visible;
-          opacity: 1;
-          transform: translate3d(0, -5px, 0);
-        }
-      }
-      .sub-menu {
-        padding: 0;
-        border-bottom: 3px solid $brand-dark;
-        border-top: none;
-        transition: all .3s ease;
-
-        li {
-          padding: 0;
-        }
-
-        a {
-          display: block;
-          text-transform: none;
-
-          &:hover {
-            background: $brand-primary;
-            color: $white;
-          }
         }
       }
     }
@@ -72,16 +68,41 @@ $number_of_links: 5;
     li {
       display: block;
 
-      a {
+      a, a:not([href]) {
         color: $brand-primary;
         display: block;
-        font-size: 30px;
+        font-size: 26px;
         text-align: left;
         text-shadow: none;
         width: 100%;
 
         &:hover {
-          color: $white;
+          color: $brand-primary;
+        }
+      }
+
+      .sub-menu {
+        position: relative;
+        transition: all .3s ease;
+        visibility: hidden;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        width: auto;
+        max-width: 100%;
+
+        a {
+          font-size: 18px;
+        }
+      }
+
+      &.et-hover, &:hover {
+        .sub-menu {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          max-height: 255px;
+          padding: 15px 0;
         }
       }
     }
@@ -110,9 +131,8 @@ $number_of_links: 5;
   }
 
   .nav-primary-wrap {
-    // float: left;
     margin-top: 20px;
-    // width: 80%;
+    display: inline-block !important;
 
     @include respondto(sm, xs) {
       background-color: #fff;
@@ -121,9 +141,9 @@ $number_of_links: 5;
       left: 0;
       margin-top: 0;
       opacity: 0;
-      overflow: visible;
+      overflow: scroll;
       padding: 40px 20px 20px;
-      position: absolute;
+      position: fixed;
       top: 0;
       transform: translateY(-100%);
       transition: all .2s ease;
@@ -141,10 +161,6 @@ $number_of_links: 5;
 
     .nav-primary {
       width: 100%;
-
-      @include respondto(sm, xs) {
-        margin-top: 40px;
-      }
     }
 
     .navbar-toggler {

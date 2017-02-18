@@ -2,7 +2,7 @@
   <div class="footer-top">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-xs-6 col-md-3">
           @include('partials.logo')
           <div class="contact-info">
             <address>
@@ -11,14 +11,14 @@
             <a href="tel:7043079528">(704) 307-9528</a>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-xs-6 col-md-3">
           <nav class="nav-footer">
             @if (has_nav_menu('footer_navigation'))
               {!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav']) !!}
             @endif
           </nav>
         </div>
-        <div class="col-md-3">
+        <div class="col-xs-6 col-md-3">
           <div class="nav-social-wrap">
             <h4>Follow Us</h4>
             <nav class="nav-social">
@@ -28,7 +28,7 @@
             </nav>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-xs-6 col-md-3">
           <div class="donate-wrap">
             <h4>Make A Difference Today</h4>
             @php
@@ -41,10 +41,10 @@
   </div>
   <div class="footer-middle container-fluid">
     <div class="row">
-      <div class="footer-logos-wrap">
+      <div class="footer-logos-wrap col-md-7">
         @include('partials.footer-logos')
       </div>
-      <div class="search-form-wrap">
+      <div class="search-form-wrap col-md-5">
         @php(get_search_form())
       </div>
     </div>

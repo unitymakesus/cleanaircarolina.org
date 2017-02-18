@@ -11,7 +11,6 @@ footer.main {
     }
 
     &-middle {
-      overflow: hidden;
 
       .row {
         padding: 15px 0;
@@ -51,7 +50,6 @@ footer.main {
   }
 
   .donate-wrap {
-
     h4 {
       @extend .t-light;
       @extend .t-shadowed;
@@ -62,22 +60,20 @@ footer.main {
     a {
       display: block;
     }
+
+    @include respondto(xs) {
+      padding-top: 1em;
+      h4 {
+        display: none;
+      }
+    }
   }
 
   .footer-logos-wrap {
-    float: left;
-    width: 60%;
-
-    @include respondto(sm,xs) {
-      clear: both;
-      float: none;
-      width: 100%;
-    }
-
     figure.footer-logos {
 
       img {
-        width: 25%;
+        width: 21%;
         max-width: 150px;
         margin-right: 4%;
 
@@ -89,15 +85,4 @@ footer.main {
     }
   }
 
-  .search-form-wrap {
-    float: left;
-    margin-top: 15px;
-    width: 40%;
-
-    @include respondto(sm,xs) {
-      clear: both;
-      float: none;
-      width: 100%;
-    }
-  }
 }

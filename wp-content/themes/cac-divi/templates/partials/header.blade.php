@@ -24,9 +24,9 @@
                   aria-label="Toggle navigation">
             <i class="fa fa-times"></i>
           </button>
-          <nav class="nav-primary">
+          <nav class="nav-primary" role="navigation" aria-label="Main Menu">
             @if (has_nav_menu('primary_navigation'))
-              {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+              {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'walker' => new Aria_Walker_Nav_Menu()]) !!}
             @endif
           </nav>
         </div>
@@ -36,7 +36,7 @@
           @endphp
         </div>
         <div class="search-action-wrap">
-          <button id="search-action">
+          <button id="search-action" type="button" aria-label="Toggle search">
             <i class="fa fa-search"></i>
           </button>
 

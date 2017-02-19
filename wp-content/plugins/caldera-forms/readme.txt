@@ -3,7 +3,7 @@ Contributors: Shelob9, Desertsnowman, christiechirinos
 Tags: forms, formbuilder, form builder, contact form, form, contact, custom form, custom forms, forms creator, caldera forms, calderawp, wp form, responsive, forms, form, drag and drop, email, awesome, wordpress free form builder, echecks, form builder plugin wordpress, wordpress builder plugin, wordpress forms builder, form builder wordpress, contact form builder wordpress, bootstrap, bootstrap form builder, bootstrap forms, login forms, drag and drop forms, responsive forms, mailchimp, mailchimp form, credit card form, braintree, braintree form, authorize.net, authorize.net form, eCheck,dwolla, dwolla form, paypal, paypal form, hi roy, search forms, pods, advanced custom fields, easy forms, contact form builder, gravity forms, contact, email, auto-responder, aweber, converkit, builder, contact forms, search, ab testing, a/b testing, split testing, shortcode, wordpress, awesome plugin, plugin, easy, braintree form, dwolla form, authorize.net form, mailchimp form, mailchimp popup, aweber form, converkit form, stripe form, stripe popup, eCheck form
 Requires at least: 4.4
 Tested up to: 4.7.2
-Stable tag: 1.4.9
+Stable tag: 1.4.9.1
 License: GPLv2
 
 A different kind of WordPress form builder.
@@ -734,10 +734,13 @@ The [Trumbowyg](https://alex-d.github.io/Trumbowyg/) JavaScript library is used
 5. **Go Further With Form Processors** - Auto-responders, redirects included! Go further with our add-ons!
 
 == Changelog ==
+= Caldera Forms 1.4.9.1 ( February 18, 2017 ) Fix Bug With PayPal Add-on =
+* SEE: [https://calderaforms.com/updates/caldera-forms-1-4-9](https://calderaforms.com/updates/caldera-forms-1-4-9.1/)
+* FIXED: When returning from PayPal, form submission may not have been completed. Now it will be completed.
+
 = Caldera Forms 1.4.9 ( February 14, 2017 ) Be My Plugin Update =
 * SEE: [https://calderaforms.com/updates/caldera-forms-1-4-9](https://calderaforms.com/updates/caldera-forms-1-4-9/)
-* FIXED: Caldera Forms, when uploading files to the media library was not respecting the correct settings for URL structure. It is now more respectful
-* FIXED: Caldera Forms, when uploading files to the media library was always attaching these files to the email. Now it only does when the setting indicates it should.
+* FIXED: File upload fields were attatching files to emails when added to media library, but not set to attatch.
 * ADDED: New filter: caldera_forms_grid_row_class - adds custom classes to rows in form layout builder. https://calderaforms.com/doc/caldera_forms_grid_row_class/
 * ADDED: New filter: caldera_forms_grid_row_id - change row id attribute in form layout builder. https://calderaforms.com/doc/caldera_forms_grid_row_id/
 * FIXED: Potential PHPMailer Exception when BCC is not set.
@@ -1473,3 +1476,6 @@ See: https://calderaforms.com/updates/caldera-forms-1-4-8/
 
 = 1.4.9 =
 See: https://calderaforms.com/updates/caldera-forms-1-4-9/
+
+= 1.4.9.1 =
+See: https://calderaforms.com/updates/caldera-forms-1-4-9.1/

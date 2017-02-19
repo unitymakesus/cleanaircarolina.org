@@ -6,6 +6,17 @@ export default class Nav {
     $(window).scroll(() => {
       Nav.checkScrollTop();
     });
+
+    /**
+     * Focus styles for menus when using keyboard navigation
+     */
+    $('[role="navigation"]').on('focus.aria  mouseenter.aria', '[aria-haspopup="true"]', (ev) => {
+      $(ev.currentTarget).attr('aria-expanded', true);
+    });
+
+    $('[role="navigation"]').on('blur.aria  mouseleave.aria', '[aria-haspopup="true"]', (ev) => {
+      $(ev.currentTarget).attr('aria-expanded', false);
+    });
   }
 
   static checkScrollTop() {

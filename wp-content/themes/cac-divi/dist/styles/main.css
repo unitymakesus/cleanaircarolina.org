@@ -13152,7 +13152,8 @@ ul [class*="icon"] a:before {
 }
 
 .nav-primary li.et-hover .sub-menu,
-.nav-primary li:hover .sub-menu {
+.nav-primary li:hover .sub-menu,
+.nav-primary li[aria-expanded="true"] .sub-menu {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translate3d(0, -5px, 0);
@@ -13223,7 +13224,8 @@ ul [class*="icon"] a:before {
   }
 
   .nav-primary li.et-hover .sub-menu,
-  .nav-primary li:hover .sub-menu {
+  .nav-primary li:hover .sub-menu,
+  .nav-primary li[aria-expanded="true"] .sub-menu {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -13270,7 +13272,8 @@ ul [class*="icon"] a:before {
   }
 
   .nav-primary li.et-hover .sub-menu,
-  .nav-primary li:hover .sub-menu {
+  .nav-primary li:hover .sub-menu,
+  .nav-primary li[aria-expanded="true"] .sub-menu {
     display: block;
     opacity: 1;
     visibility: visible;

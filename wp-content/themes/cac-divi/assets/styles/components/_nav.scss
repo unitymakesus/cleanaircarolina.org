@@ -30,7 +30,7 @@ $number_of_links: 5;
       transition: background 400ms ease;
     }
 
-    &.et-hover, &:hover {
+    &.et-hover, &:hover, &[aria-expanded="true"] {
       .sub-menu {
         visibility: visible;
         opacity: 1;
@@ -96,7 +96,7 @@ $number_of_links: 5;
         }
       }
 
-      &.et-hover, &:hover {
+      &.et-hover, &:hover, &[aria-expanded="true"] {
         .sub-menu {
           display: block;
           opacity: 1;

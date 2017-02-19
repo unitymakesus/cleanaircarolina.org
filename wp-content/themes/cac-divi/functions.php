@@ -189,7 +189,8 @@ $sage_includes = [
     'src/helpers.php',
     'src/setup.php',
     'src/filters.php',
-    'src/admin.php'
+    'src/admin.php',
+    'src/class-aria-walker-nav-menu.php'
 ];
 array_walk($sage_includes, function ($file) {
     if (!locate_template($file, true, true)) {

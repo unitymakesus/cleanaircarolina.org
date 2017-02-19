@@ -5408,6 +5408,17 @@ var Popover = function ($) {
   $(window).scroll(function () {
     Nav.checkScrollTop();
   });
+
+  /**
+   * Focus styles for menus when using keyboard navigation
+   */
+  $('[role="navigation"]').on('focus.ariamouseenter.aria', '[aria-haspopup="true"]', function (ev) {
+    $(ev.currentTarget).attr('aria-expanded', true);
+  });
+
+  $('[role="navigation"]').on('blur.ariamouseleave.aria', '[aria-haspopup="true"]', function (ev) {
+    $(ev.currentTarget).attr('aria-expanded', false);
+  });
 };
 
 Nav.checkScrollTop = function checkScrollTop () {

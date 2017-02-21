@@ -1,11 +1,11 @@
 .et_pb_button.et_pb_button {
   &.et_pb_bg_layout_light {
     color: $white;
+  }
 
-    &:hover {
-      background: $brand-dark;
-      text-decoration: none;
-    }
+  &:hover {
+    background: $brand-dark;
+    text-decoration: none;
   }
 
   &.btn-orange {
@@ -17,11 +17,12 @@
   }
 }
 
-.et_pb_contact_submit {
+.et_pb_contact_submit.et_pb_contact_submit {
   color: $white;
-
+  
   &:hover {
-    color: $brand-primary;
+    background: $brand-dark;
+    text-decoration: none;
   }
 }
 

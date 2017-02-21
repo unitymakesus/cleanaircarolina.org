@@ -12594,7 +12594,7 @@ ul [class*="icon"] .back-to-top a {
   color: #fff;
 }
 
-.et_pb_button.et_pb_button.et_pb_bg_layout_light:hover {
+.et_pb_button.et_pb_button:hover {
   background: #064264;
   text-decoration: none;
 }
@@ -12607,12 +12607,13 @@ ul [class*="icon"] .back-to-top a {
   background: #a55020;
 }
 
-.et_pb_contact_submit {
+.et_pb_contact_submit.et_pb_contact_submit {
   color: #fff;
 }
 
-.et_pb_contact_submit:hover {
-  color: #1576B9;
+.et_pb_contact_submit.et_pb_contact_submit:hover {
+  background: #064264;
+  text-decoration: none;
 }
 
 .et_pb_bg_layout_dark .et_pb_button {
